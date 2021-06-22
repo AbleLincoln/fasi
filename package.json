@@ -1,0 +1,17 @@
+{
+  "name": "fasi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fasi-logos.js",
+  "scripts": {
+    "logos:generate": "node scripts/logo-generator.js",
+    "logos:dev": "nodemon scripts/logo-generator.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.8.0",
+    "nodemon": "^2.0.7"
+  }
+}
