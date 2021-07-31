@@ -1,0 +1,43 @@
+.block-model
+{
+    background-color: $gray;
+    padding: 100px 0 120px;
+    @include sm()
+    {
+        padding: 51px 0 48px;
+    }
+
+    &__content {
+    }
+
+    &__image {
+        img {
+            margin-left: 40px;
+            margin-top: 80px;
+            
+            @include md() {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+
+        .image-caption {
+            
+            @include md() {
+                right: 15px;
+            }
+            
+            @include sm() {
+                right: 20px;
+            }
+        }
+    }
+
+    .row {
+        align-items: center;
+    }
+
+    h2:only-child {
+        margin: 0 0 32px;
+    }
+}

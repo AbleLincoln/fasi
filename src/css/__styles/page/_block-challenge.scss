@@ -1,0 +1,109 @@
+.block-challenge {
+
+  > .container {
+      padding-top: 100px;
+      padding-bottom: 120px;
+
+      @include sm() {
+          padding-top: 60px;
+          padding-bottom: 60px;
+      }
+  }
+
+  &__headlines {
+    margin-bottom: 36px;
+  }
+
+  &__content {
+    margin-bottom: 42px;
+    align-items: flex-start;
+
+    img {
+      @include sm() {
+        margin-bottom: 42px;
+      }
+    }
+
+    &-right {
+      margin-bottom: 88px;
+      
+      @include sm() {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__stat {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: 1px solid $blue-dark;
+
+    @include sm() {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+    }
+
+    .stat-container {
+      display: block;
+      width: 300px;
+
+      @include sm() {
+        width: 100px;
+        flex-basis: 100px;
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+    }
+
+    span {
+      font-style: italic;
+      font-weight: 400;
+
+      &.stat-before,
+      &.stat-number,
+      &.stat-after {
+        color: $blue;
+        font-size: 96px;
+        line-height: 1;
+        white-space: nowrap;
+
+        @include sm() {
+          font-size: 32px;
+          margin-right: 2px;
+          
+        }
+      }
+
+      &.stat-before {
+        margin-right: 16px;
+
+        @include sm() {
+          margin-right: 6px;
+          
+        }
+      }
+
+      &.stat-content {
+        margin-left: 32px;
+      }
+
+      &.stat-full {
+        white-space: nowrap;
+
+        &.sized {
+          flex-grow: 0;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  &__stats {
+    margin-bottom: 30px; // base spacing in block
+  }
+}

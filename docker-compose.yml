@@ -1,0 +1,39 @@
+version: "3.9"
+    
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./db:/docker-entrypoint-initdb.d
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    working_dir: /var/www/html
+    volumes:
+      - ./wp-content:/var/www/html/app
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_TABLE_PREFIX: xyz_
+      WORDPRESS_DEBUG: 1
+      WORDPRESS_CONFIG_EXTRA: |
+        define ('WP_CONTENT_FOLDERNAME', 'app');
+        define ('WP_CONTENT_DIR', ABSPATH . WP_CONTENT_FOLDERNAME);
+        define('WP_SITEURL', 'http://' . $$_SERVER['HTTP_HOST'] . '/');
+        define('WP_CONTENT_URL', WP_SITEURL . WP_CONTENT_FOLDERNAME);
+volumes:
+  db_data: {}

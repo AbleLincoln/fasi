@@ -1,0 +1,115 @@
+.block-testimonial {
+    background: $blue-dark;
+    background: linear-gradient(90deg, $blue-dark 0%, $blue 100%);
+    color: $white;
+
+    > .container {
+        padding-top: 100px;
+        padding-bottom: 120px;
+
+        @include sm() {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &__testimonial {
+        padding-left: 190px;
+        margin-bottom: 24px;
+
+        @include sm() {
+            padding-left: 120px;
+        }
+
+        &::before {
+            content: '';
+            width: 160px;
+            height: 1px;
+            background-color: $white;
+            transform: rotate(-45deg);
+            transform-origin: left;
+            position: absolute;
+            top: 125px;
+            left: 0;
+
+            @include sm() {
+                transform: rotate(-45deg) scale(.6);
+                transform-origin: top left;
+                left: 20px;
+                top: 80px;
+            }
+        }
+
+        p {
+            font-style: italic;
+            color: $white;
+            position: relative;
+            font-size: 36px;
+            line-height: 42px;
+
+            @include sm() {
+                font-size: 20px;
+                line-height: 26px;
+            }
+
+            &::before {
+                content: '“';
+                position: absolute;
+                top: 0;
+                left: -30px;
+
+                @include sm() {
+                    left: -10px;
+                }
+            }
+
+            &::after {
+                content: '”';
+            }
+        }
+    }
+
+    &__quotes {
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 114px;
+        height: 114px;
+
+        &::before {
+            content: '“';
+            font-size: 96px;
+            line-height: 0;
+            font-family: $font-base;
+            font-style: italic;
+            position: absolute;
+            top: 50px;
+            left: -10px;
+        }
+
+        &::after {
+            content: '”';
+            font-size: 96px;
+            line-height: 0;
+            font-family: $font-base;
+            font-style: italic;
+            position: absolute;
+            bottom: 10px;
+            right: 16px;
+        }
+
+        @include sm() {
+            transform: scale(.6);
+            transform-origin: top left;
+            left: 20px;
+        }
+    }
+
+    &__author {
+        text-align: right;
+
+        cite {
+            font-style: normal;
+        }
+    }
+}

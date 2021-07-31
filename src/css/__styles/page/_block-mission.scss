@@ -1,0 +1,79 @@
+.block-mission
+{
+    background-color: $blue-light;
+    padding: 100px 0 120px;
+    @include sm()
+    {
+        padding: 51px 0 48px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+
+        .overline {
+            padding-right: 5px;
+            
+            @include md() {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__image {
+            
+        @include md() {
+            margin-top: 60px;
+        }
+
+        img {
+            margin-left: -50px;
+            
+            @include md() {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+
+        .image-caption {
+            right: 65px;
+            
+            @include md() {
+                right: 15px;
+            }
+            
+            @include sm() {
+                right: 20px;
+            }
+        }
+    }
+
+    &__push {
+        order: 2;
+            
+        @include md() {
+            order: 0;
+        }
+    }
+
+    &__pull {
+        order: 1;
+            
+        @include md() {
+            order: 0;
+        }
+    }
+
+    .overline:last-child {
+        margin-bottom: 32px;
+        text-align: right;
+            
+        @include md() {
+            text-align: left;
+        }
+    }
+
+    h2:only-child {
+        margin: 0 0 32px;
+    }
+}

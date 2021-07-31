@@ -1,0 +1,53 @@
+.block-content-with-background {
+    background-color: $blue-dark;
+    position: relative;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    span,
+    .overline {
+        color: $white;
+    }
+
+    > .container {
+        padding-top: 100px;
+        padding-bottom: 120px;
+
+        @include sm() {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        &::before {
+            content: '';
+            background-image: linear-gradient( to right, #001733, #001733 30%, #3c66ff 80%, #3c66ff 100% );
+            mix-blend-mode: multiply;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: .66;
+        }
+    }
+}

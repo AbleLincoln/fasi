@@ -1,0 +1,185 @@
+.block-news-bar {
+    background-color: $blue;
+    overflow: hidden;
+    position: relative;
+
+    .container {
+        padding-top: 90px;
+        padding-bottom: 70px;
+    }
+
+    > .container {
+        @include md() {
+            padding-top: 0;
+            padding-bottom: 90px;
+        }
+    }
+
+    .overline {
+        color: $white;
+    }
+
+    h3 {
+        color: $white;
+        font-size: 30px;
+        line-height: 38px;
+        margin-top: 30px;
+    }
+
+    .c-btn {
+        color: $white;
+    }
+
+    &__slide {
+        outline: none;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        &::before {
+            content: '';
+            background-image: linear-gradient( to right, #001733, #3c66ff );
+            mix-blend-mode: multiply;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: .74;
+        }
+    }
+
+    &__content {
+        margin-bottom: 0;
+        position: relative;
+        padding-right: rem(280);
+
+        @include md() {
+            margin-bottom: rem(22);
+            padding-right: 0;
+        }
+    }
+
+    &__info-container {
+        display: flex;
+        align-items: center;
+        pointer-events: none;
+        justify-content: flex-end;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        @include md() {
+            justify-content: flex-start;
+
+            position: relative;
+            top: auto;
+            right: auto;
+            bottom: auto;
+            left: auto;
+        }
+    }
+
+    &__info {
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: rem(12);
+        line-height: rem(16);
+        letter-spacing: rem(2);
+        position: relative;
+        width: 250px;
+
+        &-current,
+        &-total {
+            padding-bottom: rem(2);
+            position: relative;
+            z-index: 1;
+        }
+
+        &-current {
+            border-right: 1px solid $white;
+            margin-left: rem(5);
+            margin-right: rem(6);
+            padding-right: rem(6);
+        }
+
+        &-total {
+            margin-right: rem(10);
+        }
+    }
+
+    &__arrows {
+        order: 2;
+        pointer-events: all;
+
+        @include md() {
+            order: -1;
+        }
+
+        .slick-arrow {
+            background: transparent;
+            border: none;
+            transform: none;
+            margin: 0 0 0 rem(10);
+
+            position: relative;
+            top: auto;
+            right: auto;
+            bottom: auto;
+            left: auto;
+
+            @include md() {
+                margin: 0 rem(10) 0 0;
+            }
+
+            &::after {
+                border-color: $white;
+                width: 50px;
+                height: 50px;
+
+                @include sm() {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            &:hover {
+                &::after {
+                    border-color: $white;
+                }
+            }
+
+            &.slick-prev {
+                position: absolute;
+                left: 50px;
+                top: -15px;
+            }
+
+            &.slick-next {
+                position: absolute;
+                right: 60px;
+                top: -15px;
+
+                @include md() {
+                    right: 50px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,211 @@
+.block-image-accordion
+{
+    background-color: $blue-light;
+
+    > .container {
+        padding-top: 100px;
+
+        @include sm() {
+            padding-top: 60px;
+        }
+    }
+
+    &__content {
+        margin-bottom: 120px;
+    
+        @include sm() {
+            margin-bottom: 48px;
+        }
+    }
+
+    &__accordion {
+        margin-top: 10px;
+            
+        @include md() {
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+
+        &-container {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+    
+            @include md() {
+                display: block;
+            }
+
+            &::before {
+                content: '';
+                background-image: url(../images/hexagons.png);
+                background-size: 90%;
+                background-position: top left;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                padding-bottom: 60%;
+    
+                @include md() {
+                    content: none;
+                }
+            }
+        }
+
+        &-item {
+            border-bottom: 1px solid $blue-dark;
+
+            &:first-child {
+                border-top: 1px solid $blue-dark;
+            }
+
+            &-title {
+                width: 100%;
+
+                button {
+                    appearance: none;
+                    border: 0;
+                    background: transparent;
+                    color: $black;
+                    cursor: pointer;
+                    font-size: 24px;
+                    line-height: 30px;
+                    text-align: left;
+                    width: 100%;
+                    position: relative;
+                    padding: 13px 40px 11px 0;
+    
+                    @include sm() {
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+
+                    &::before, 
+                    &::after {
+                        content: '';
+                        width: 25px;
+                        height: 2px;
+                        background-color: $blue;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto 0;
+                    }
+ 
+                    &::after {
+                        transform: rotate(-90deg);
+                        transform-origin: center center;
+                    }
+                }
+            }
+
+            &-inline-image,
+            &-content {
+                display: none;
+            }
+
+            &-inline-image {
+                margin-bottom: 20px;
+            }
+
+            &-content {
+                margin-bottom: 52px;
+            }
+
+            &.open {
+                .block-image-accordion__accordion-item-inline-image,
+                .block-image-accordion__accordion-item-content {
+                    display: block;
+                }
+                
+                .block-image-accordion__accordion-item-title {
+                    button {
+                        &::after {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__image {
+        position: relative;
+            
+        @include md() {
+            display: none;
+        }
+
+        &-mobile {
+            display: none;
+            
+            @include md() {
+                display: block;
+            }
+
+            &::before {
+                background-image: url(../images/hexagons.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 200vw;
+                padding-bottom: 60%;
+                z-index: 0;
+    
+                @include md() {
+                    content: '';
+                }
+            }
+
+            img {
+                position: relative;
+                z-index: 1;
+            }
+        }
+
+        img {
+            display: block;
+            width: 80%;
+            height: auto;
+            margin: auto auto 0;
+            
+            @include md() {
+                width: 100%;
+            }
+        }
+
+        .image-caption {
+            right: 65px;
+            
+            @include md() {
+                right: 15px;
+            }
+            
+            @include sm() {
+                right: 20px;
+            }
+        }
+
+        &-overlay {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            bottom: 0;
+            left: 15px;
+            opacity: 0;
+
+            &.open {
+                opacity: 1;
+            
+                @include md() {
+                    display: none;
+                }
+            }
+        }
+    }
+}

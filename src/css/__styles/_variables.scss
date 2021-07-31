@@ -1,0 +1,58 @@
+// 1. TEXT
+// ---------------------------------------------
+
+// Regular text
+$font-base: 'fkgrotesk', sans-serif;
+$font-size-base: 20px;
+$line-height-base: 30px;
+
+// Colors
+$green: #54D891;
+$blue: #3C67FF;
+$blue-dark: #001733;
+$blue-light: #e4f1f7;
+$gray: #f7f8f9;
+
+$color-1: $blue;
+$color-1-hover: $blue-dark;
+$color-2: #d5d9de;
+$color-3: #eff0f2;
+$color-4: #f3a5a3;
+$color-5: #58697a;
+$color-6: #e7e9ec;
+
+$white: #fff;
+$black: #000;
+$neutral-90: $color-2;
+
+$body-color: #ffffff;
+
+$text-color-base: $blue-dark;
+$text-color-alt: $blue-dark;
+$text-color-opposite: #ffffff;
+
+$heading-color-base: $blue-dark;
+
+// Navigation
+$nav-color: #fff;
+$nav-light-color: #fff;
+$nav-hover-color: #fff;
+$nav-light-hover-color: #fff;
+$subnav-color: #fff;
+$subnav-light-color: #fff;
+
+// Links
+$link-color: $color-1;
+$link-hover-color: $color-1;
+
+// Fonts
+$font-secondary: $font-base;
+
+// 2. WORDPRESS
+// ---------------------------------------------
+
+$media-margin: 30px;
+$media-margin-mobile: 20px;
+
+// Outline
+$outline: rem( 2 ) solid #7aacfe;

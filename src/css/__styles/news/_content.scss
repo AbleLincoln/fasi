@@ -1,0 +1,272 @@
+.news-archive {
+    background-color: $gray;
+    padding-top: 100px;
+    padding-bottom: 120px;
+
+    @include sm() {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &__filters {
+        margin-bottom: 65px;
+
+        form {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        select,
+        input {
+            width: 100%;
+            border-radius: 0;
+            font-size: 14px;
+            line-height: 20px;
+            background-color: $white;
+            appearance: none;
+            border: 1px solid $black;
+            padding: 9px;
+            height: auto;
+        }
+    }
+
+    &__select {
+        display: inline-block;
+        width: 255px;
+        max-width: 100%;
+        position: relative;
+        margin-right: 30px;
+
+        &::after {
+            content: '';
+            border-top: 9px solid $black;
+            border-right: 5px solid transparent;
+            border-left: 5px solid transparent;
+            position: absolute;
+            top: 0;
+            right: 15px;
+            bottom: 0;
+            margin: auto;
+            height: 0;
+        }
+
+        select {
+            text-transform: uppercase;
+        }
+    }
+
+    &__search {
+        display: inline-block;
+        width: 255px;
+        max-width: 100%;
+        position: relative;
+        margin-right: 30px;
+
+        .icon-search {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            bottom: 0;
+            margin: auto;
+            height: 24px;
+            width: 24px;
+            transform: rotate(90deg);
+        }
+    }
+
+    &__submit {
+        display: inline-block;
+        width: 55px;
+    }
+
+    &__post {
+        margin-bottom: 60px;
+
+        &:hover {
+            .news-archive {
+                &__image {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+
+                &__arrow {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__image {
+        margin-bottom: 18px;
+        position: relative;
+
+        &::before {
+            content: '';
+            background-color: rgba($black, .3);
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            pointer-events: none;
+            transition: 300ms ease all;
+        }
+
+        &--video {
+            .iframe-wrapper {
+                margin: 0;
+                padding-bottom: 56.51%;
+            }
+
+            iframe {
+                width: 100%;
+            }
+
+            &::before {
+                content: none;
+            }
+        }
+    }
+
+    &__arrow {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 5px solid $white;
+        width: 137px;
+        height: 137px;
+        border-radius: 50%;
+        margin: auto;
+        transition: 300ms ease all;
+
+        &::after {
+            content: '';
+            border-right: 5px solid $white;
+            border-bottom: 5px solid $white;
+            width: 55px;
+            height: 55px;
+            transform: rotate(-45deg);
+            transform-origin: center;
+            position: absolute;
+            top: 0;
+            right: 20px;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+    }
+
+    &__meta {
+        text-transform: uppercase;
+        margin-bottom: 18px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 700;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 24px;
+        line-height: 30px;
+
+        a {
+            color: $black;
+            text-decoration: none;
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+
+    &__pagination {
+        text-align: right;
+        margin-top: 40px;
+        margin-bottom: -60px;
+
+        ul {
+            display: inline-block;
+
+            li {
+                display: inline-block;
+                color: $black;
+                padding-left: 0;
+                margin: 0;
+
+                &::before,
+                &::after {
+                    content: none;
+                }
+
+                &.active {
+                    color: $blue;
+                    padding: 10px 14px;
+                }
+
+                a {
+                    color: $black;
+                    text-decoration: none;
+                    padding: 10px 14px;
+                    border-bottom: 0 !important;
+
+                    &:hover {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &-prev,
+        &-next {
+
+            a {
+                display: inline-block;
+                overflow: hidden;
+                width: 40px;
+                height: 75px;
+                margin-bottom: -30px;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    border-bottom: 2px solid $black;
+                    width: 50px;
+                    height: 50px;
+                    transform-origin: center;
+                }
+            }
+
+            span {
+                width: 0;
+                height: 0;
+                position: absolute;
+                overflow: hidden;
+            }
+        }
+
+        &-prev {
+            a {
+                &::before {
+                    margin-left: -4px;
+                    margin-top: 2px;
+                    border-left: 2px solid $black;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        &-next {
+            a {
+                &::before {
+                    margin-left: -36px;
+                    margin-top: 2px;
+                    border-right: 2px solid $black;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.alert-bar {
+  background-color: $blue-dark;
+  padding: rem(12) 0;
+  position: relative;
+
+  &__close {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: rem(20);
+    bottom: 0;
+    margin: auto 0;
+
+    height: 24px;
+    width: 24px;
+
+    &:before,
+    &:after {
+      background-color: $white;
+      content: '';
+      display: block;
+      height: rem(2);
+      width: rem(16);
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+  }
+
+  .container .row .col-12 {
+    @include sm() {
+      padding-right: 45px;
+    }
+  }
+
+  p {
+    color: $white;
+    font-size: rem(14);
+    line-height: rem(16);
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}

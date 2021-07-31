@@ -1,0 +1,152 @@
+.staff-single {
+  background: $gray;
+  padding: 85px 0 115px;
+
+  &__sidebar {
+
+    @include sm() {
+      margin-bottom: 40px;
+    }
+
+    &-item {
+      border-top: 1px solid $blue-dark;
+      padding: 28px 0;
+
+      &:last-child {
+        border-bottom: 1px solid $blue-dark;
+      }
+    }
+
+    ul {
+      margin-bottom: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 14px;
+        font-size: 16px;
+        line-height: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &--education {
+      padding-left: 0;
+    }
+
+    &--affiliations {
+      padding-left: 8px;
+
+      li {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 10px;
+          left: -11px;
+          height: 1px;
+          width: 7px;
+          background-color: $blue-dark;
+        }
+      }
+    }
+  }
+
+  &__content {
+    blockquote {
+      margin-bottom: 46px;
+
+      p {
+        font-style: italic;
+
+        &::before {
+          content: '“';
+          margin-left: -13px;
+
+          @include sm() {
+            margin-left: 0;
+          }
+        }
+
+        &::after {
+          content: '”';
+        }
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 80px;
+    width: 100%;
+
+    &-left {
+
+      @include sm() {
+        margin-bottom: 40px;
+      }
+      
+      .c-btn-secondary {
+
+        span {
+          order: 2;
+
+          &::after {
+            position: absolute;
+            left: -58px;
+            margin: auto 0;
+          }
+        }
+
+        &::before {
+          right: auto;
+          bottom: 1px;
+          left: 4px;
+          transform: rotate(180deg);
+        }
+
+        &::after {
+          order: 1;
+          margin-left: 0;
+          margin-right: 18px;
+        }
+      }
+    }
+
+    &-right {
+      .c-btn-wrapper {
+        text-align: right;
+
+        @include sm() {
+          display: inline-block;
+        }
+
+        span {
+          @include sm() {
+            display: inline-block;
+            width: calc(100% - 58px);
+            text-align: right;
+            line-height: 1.2;
+          }
+        }
+
+        &::after {
+          @include sm() {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

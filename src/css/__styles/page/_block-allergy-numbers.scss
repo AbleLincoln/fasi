@@ -1,0 +1,33 @@
+.block-allergy-numbers {
+
+  > .container {
+      padding-top: 100px;
+      padding-bottom: 120px;
+
+      @include sm() {
+          padding-top: 60px;
+          padding-bottom: 60px;
+      }
+  }
+
+  &__headlines {
+    margin-bottom: 100px;
+
+    @include sm() {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 42px;
+  }
+
+  &__bottom-content {
+    margin-top: 65px;
+
+    @include sm() {
+      padding-left: 0;
+      margin-top: 40px;
+    }
+  }
+}

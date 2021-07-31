@@ -1,0 +1,195 @@
+/* Headings */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6
+{
+    font-weight: 400;
+    line-height: 1;
+
+    margin: 0 0 47px;
+
+    color: $heading-color-base;
+
+    &:only-child
+    {
+        margin: 0;
+    }
+    p + &
+    {
+        margin-top: 42px;
+
+        @include sm()
+        {
+            margin-top: 35px;
+        }
+    }
+}
+
+h1,.h1
+{
+    font-size: 96px;
+    line-height: 120px;
+
+    margin: 0 0 47px;
+
+    @include sm()
+    {
+        font-size: 48px;
+        line-height: 60px;
+    
+        margin: 0 0 32px;
+    }
+}
+h2,.h2
+{
+    font-size: 68px;
+    line-height: 90px;
+
+    margin: 0 0 32px;
+
+    @include sm()
+    {
+        font-size: 40px;
+        line-height: 48px;
+    
+        margin: 0 0 32px;
+    }
+    p + &
+    {
+        margin-top: 60px;
+
+        @include sm()
+        {
+            // margin-top: 44px;
+        }
+    }
+}
+h3,.h3
+{
+    font-size: 48px;
+    line-height: 60px;
+
+    margin: 0 0 18px;
+
+    @include sm()
+    {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+h4,.h4
+{
+    font-size: 30px;
+    line-height: 38px;
+
+    margin: 0 0 3px;
+
+    @include sm()
+    {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    p + &
+    {
+        margin-top: 37px;
+
+        @include sm()
+        {
+            // margin-top: 24px;
+        }
+    }
+}
+h5,.h5
+{
+    font-size: 16px;
+    line-height: 18px;
+
+    margin: 0 0 15px;
+    p + &
+    {
+        margin-top: 32px;
+    }
+}
+h6,.h6
+{
+    font-size: 14px;
+    line-height: 16px;
+
+    margin: 0 0 15px;
+    p + &
+    {
+        margin-top: 28px;
+    }
+}
+/* Text Elements */
+p,
+.p
+{
+    margin: 0 0 32px;
+    &:last-child{
+        margin:0;
+    }
+    @include sm()
+    {
+        margin: 0 0 24px;
+    }
+    ul,
+    ol + &
+    {
+        margin-top: 32px;
+
+        @include sm()
+        {
+            margin-top: 24px;
+        }
+    }
+}
+.p {
+    font-size: 20px;
+    line-height: 24px;
+
+    @include sm() {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+strong
+{
+    font-weight: 700;
+}
+/* Horizontal Line */
+hr
+{
+    margin: 70px 0;
+
+    border-top: 1px solid $text-color-alt;
+    @include sm()
+    {
+        margin: 52px 0;
+    }
+}
+
+.overline {
+    color: $blue;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+::selection {
+  background: $color-2;
+}
+::-moz-selection {
+  background: $color-2;
+}
