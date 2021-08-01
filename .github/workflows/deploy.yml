@@ -15,5 +15,5 @@ jobs:
         port: 22
         username: b66244294086605
         password: ${{ secrets.ftp_password }}
-        local-dir: ./wp-content/themes/fasi/
-        server-dir: ./wp-content/themes/fasi/
+        sourceDir: ./wp-content/themes/fasi/
+        targetDir: ./wp-content/themes/fasi/
