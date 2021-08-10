@@ -43,10 +43,11 @@ if (have_posts()) :
 						while (have_posts()) :
 							the_post();
 
-								$link = get_field('external_link') ? get_field('external_link') : get_permalink();
+							$link = get_field('external_link') ? get_field('external_link') : get_permalink();
 
 							$video_iframe = get_field('video_thumbnail') ? get_field('video_thumbnail') : false;
 							$video_url = get_field('video_thumbnail') ? get_field('video_thumbnail', false, false) : false;
+							$thumbnail_url = get_the_post_thumbnail_url()
 						?>
 							<article class="news-archive__post col-12 col-lg-6">
 								<?php if (get_post_thumbnail_id() || $video_iframe) : ?>
@@ -54,7 +55,7 @@ if (have_posts()) :
 																		echo ' news-archive__image--video';
 																	} ?>">
 										<?php if ($video_iframe) {
-											echo oembed_video_wrapper($video_iframe, $video_url);
+											echo oembed_video_wrapper($video_iframe, $video_url, $thumbnail_url);
 										} else { ?>
 											<a href="<?php echo $link; ?>" <?php echo $target; ?>>
 												<?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'news'); ?>

@@ -9,7 +9,8 @@
 
 add_filter( 'embed_oembed_html', 'oembed_video_wrapper', 99, 4 );
 
-function oembed_video_wrapper( $cached_html, $url ) {
+function oembed_video_wrapper($cached_html, $url, $thumbnail_url)
+{
 	$class = 'iframe-wrapper';
 	// $icon  = get_svg( 'triangle-play' );
 	$id    = substr( $url, strrpos( $url, '/' ) + 1 );
@@ -43,6 +44,10 @@ function oembed_video_wrapper( $cached_html, $url ) {
             $img_src = $url;
         }
 	}
+
+    if ($thumbnail_url) {
+        $img_src = $thumbnail_url;
+    }
 
 	// Move iframe src to data-src attribute to avoid loading iframe when page is loading
 	$cached_html = preg_replace('/src=\"/','loading="lazy" data-src="',$cached_html);
