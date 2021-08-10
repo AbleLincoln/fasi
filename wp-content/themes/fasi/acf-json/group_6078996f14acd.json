@@ -217,9 +217,28 @@
         },
         {
             "key": "field_60ad22639ee3a",
-            "label": "Optional Button",
-            "name": "optional_button",
-            "type": "link",
+            "label": "Back Button Text (optional)",
+            "name": "back_button_text",
+            "type": "text",
+            "instructions": "The text to be show instead of \"Back: <name>\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6112e09ec2f8a",
+            "label": "Hide Back Button",
+            "name": "hide_back_button",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -228,7 +247,11 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_6104f7b33f404",
@@ -267,5 +290,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1627715596
+    "modified": 1628627892
 }

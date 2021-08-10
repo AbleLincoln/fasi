@@ -12,8 +12,9 @@ $education = get_field('education');
 $affiliations = get_field('affiliations');
 $quote = get_field('quote');
 $content = get_the_content(get_the_ID());
-$optional_button = get_field('optional_button');
-$next_button_text = get_field('next_button_text')
+$back_button_text = get_field('back_button_text');
+$hide_back_button = get_field('hide_back_button');
+$next_button_text = get_field('next_button_text');
 ?>
 
 <section class="staff-single">
@@ -56,9 +57,27 @@ $next_button_text = get_field('next_button_text')
             <div class="staff-single__navigation">
                 <div class="staff-single__navigation-left col-12 col-lg-6">
                     <?php
-                    if (!empty($optional_button)) {
-                        $optional_button['class'] = 'c-btn c-btn-secondary';
-                        echo '<div class="c-btn-wrapper"><a href="' . $optional_button['url'] . '" class="' . $optional_button['class'] . '" target="' . $optional_button['target'] . '"><span>' . $optional_button['title'] . '</span></a></div>';
+                    if(!$hide_back_button) {
+                        $prev_staff = get_next_post();
+                        if (empty($prev_staff)) {
+                            $staff_args = array(
+                                'post_type' => 'staff',
+                                'post_status' => 'publish',
+                                'posts_per_page' => 1,
+                                'order' => 'DESC'
+                            );
+                            $posts = get_posts($staff_args);
+                            $prev_staff = isset($posts[0]) ? $posts[0] : false;
+                        }
+                        if (false !== $prev_staff) {
+                            $block_button = array(
+                                'url'    => get_permalink($prev_staff->ID),
+                                'title'  => empty($back_button_text) ? 'Back: Meet ' . get_the_title($prev_staff->ID) : $back_button_text,
+                                'target' => '_self',
+                                'class'  => 'c-btn c-btn-secondary'
+                            );
+                            echo '<div class="c-btn-wrapper"><a href="' . $block_button['url'] . '" class="' . $block_button['class'] . '" target="' . $block_button['target'] . '"><span>' . $block_button['title'] . '</span></a></div>';
+                        }
                     }
                     ?>
                 </div>
