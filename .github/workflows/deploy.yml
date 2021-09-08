@@ -9,7 +9,7 @@ jobs:
       uses: actions/checkout@v2
     
     - name: 📂 Sync files
-      uses: AbleLincoln/push-to-sftp@v1.2
+      uses: AbleLincoln/push-to-sftp@main
       with:
         host: foodallergyscience.org
         port: 22
