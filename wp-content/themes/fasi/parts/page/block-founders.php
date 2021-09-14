@@ -42,7 +42,7 @@ $founders_sections = get_sub_field('founders_sections');
                                     </div>
                                 <?php } ?>
                                 <?php foreach ( $section['founders_members'] as $member ) { ?>
-                                    <div class="block-founders__item col-6 col-lg-3">
+                                    <div class="block-founders__item col-6 col-lg-4">
                                         <?php if ( ! empty( $member['link'] ) ) { ?><a href="<?php echo $member['link']; ?>"><?php } ?>
                                         <div class="block-founders__image">
                                             <?php echo wp_get_attachment_image( $member['image'], 'signature' ); ?>
