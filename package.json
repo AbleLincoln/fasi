@@ -6,6 +6,8 @@
   "scripts": {
     "logos:generate": "node scripts/logo-generator.js",
     "logos:dev": "nodemon scripts/logo-generator.js",
+    "graph:generate": "node scripts/graph-generator.js",
+    "graph:dev": "nodemon scripts/graph-generator.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "sass --watch src/css/style.scss wp-content/themes/fasi/css/style.css"
   },
