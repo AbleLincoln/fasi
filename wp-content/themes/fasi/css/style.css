@@ -4701,6 +4701,7 @@ blockquote {
 .staff-single__navigation {
   display: flex;
   flex-flow: row wrap;
+  flex-direction: row-reverse;
   margin-top: 80px;
   width: 100%;
 }
@@ -4708,6 +4709,9 @@ blockquote {
   .staff-single__navigation-left {
     margin-bottom: 40px;
   }
+}
+.staff-single__navigation-left .c-btn-wrapper {
+  text-align: right;
 }
 .staff-single__navigation-left .c-btn-secondary span {
   order: 2;

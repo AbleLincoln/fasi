@@ -57,52 +57,42 @@ $next_button_text = get_field('next_button_text');
             <div class="staff-single__navigation">
                 <div class="staff-single__navigation-left col-12 col-lg-6">
                     <?php
-                    if(!$hide_back_button) {
-                        $prev_staff = get_next_post();
-                        if (empty($prev_staff)) {
-                            $staff_args = array(
-                                'post_type' => 'staff',
-                                'post_status' => 'publish',
-                                'posts_per_page' => 1,
-                                'order' => 'DESC'
-                            );
-                            $posts = get_posts($staff_args);
-                            $prev_staff = isset($posts[0]) ? $posts[0] : false;
+                    $staff_page_ID = 651;
+                    $page_blocks = get_fields($staff_page_ID)['page_blocks'];
+
+                    /**
+                     * filters staff blocks to look for the one where the staff id matches the one for this current staff page
+                     */
+                    function filter_staff_blocks($block)
+                    {
+                        if ($block['acf_fc_layout'] == 'block_staff') {
+
+                            $staff_members = array_column($block['staff_sections'][0]['staff_members'], 'staff_member');
+
+                            $the_staff_member = array_filter($staff_members, function ($staff) {
+                                return $staff->ID === get_the_ID();
+                            });
+                            if (!empty($the_staff_member)) return true;
                         }
-                        if (false !== $prev_staff) {
-                            $block_button = array(
-                                'url'    => get_permalink($prev_staff->ID),
-                                'title'  => empty($back_button_text) ? 'Back: Meet ' . get_the_title($prev_staff->ID) : $back_button_text,
-                                'target' => '_self',
-                                'class'  => 'c-btn c-btn-secondary'
-                            );
-                            echo '<div class="c-btn-wrapper"><a href="' . $block_button['url'] . '" class="' . $block_button['class'] . '" target="' . $block_button['target'] . '"><span>' . $block_button['title'] . '</span></a></div>';
-                        }
+                        return false;
                     }
-                    ?>
-                </div>
-                <div class="staff-single__navigation-right col-12 col-lg-6">
-                    <?php
-                    $next_staff = get_previous_post();
-                    if (empty($next_staff)) {
-                        $staff_args = array(
-                            'post_type' => 'staff',
-                            'post_status' => 'publish',
-                            'posts_per_page' => 1,
-                            'order' => 'ASC'
-                        );
-                        $posts = get_posts($staff_args);
-                        $next_staff = isset($posts[0]) ? $posts[0] : false;
+
+                    $filtered_blocks = array_values(array_filter($page_blocks, 'filter_staff_blocks'));
+                    // default values
+                    $section_title = 'Principal Investigators';
+                    $section_anchor = 'investigators';
+                    if (!empty($filtered_blocks)) {
+                        $section_title = $filtered_blocks[0]['staff_sections'][0]['section_title'];
+                        $section_anchor = $filtered_blocks[0]['anchor_id'];
                     }
-                    if (false !== $next_staff) {
-                        $block_button = array(
-                            'url'    => get_permalink($next_staff->ID),
-                            'title'  => empty($next_button_text) ? 'Next: Meet ' . get_the_title($next_staff->ID) : $next_button_text,
-                            'target' => '_self',
-                            'class'  => 'c-btn c-btn-secondary'
-                        );
-                        echo '<div class="c-btn-wrapper"><a href="' . $block_button['url'] . '" class="' . $block_button['class'] . '" target="' . $block_button['target'] . '"><span>' . $block_button['title'] . '</span></a></div>';
-                    }
+
+                    $block_button = array(
+                        'url'    => get_permalink($staff_page_ID) . '#' . $section_anchor,
+                        'title'  => 'Back: ' . $section_title,
+                        'target' => '_self',
+                        'class'  => 'c-btn c-btn-secondary'
+                    );
+                    echo '<div class="c-btn-wrapper"><a href="' . $block_button['url'] . '" class="' . $block_button['class'] . '" target="' . $block_button['target'] . '"><span>' . $block_button['title'] . '</span></a></div>';
                     ?>
                 </div>
             </div>
