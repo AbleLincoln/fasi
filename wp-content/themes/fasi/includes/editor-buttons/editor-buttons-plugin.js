@@ -149,59 +149,78 @@
                         text: 'Button',
                         onClick: function() {
                             ed.windowManager.open({
-                                title: 'Button Settings',
-                                body: [
-                                    {
-                                        type: 'textbox',
-                                        name: 'btnUrl',
-                                        label: 'Button URL: '
-                                    },
-                                    {
-                                        type: 'listbox',
-                                        name: 'style',
-                                        label: 'Style: ',
-                                        values: [
-                                            { text: 'Primary', value: 'primary'},
-                                            { text: 'Secondary', value: 'secondary'}
-                                        ],
-                                        value: 'primary'
-                                    },
-                                    {
-                                        type: 'listbox',
-                                        name: 'color',
-                                        label: 'Color: ',
-                                        values: [
-                                            { text: 'Normal', value: 'normal'},
-                                            { text: 'Alternative', value: 'alt'}
-                                        ],
-                                        value: 'normal'
-                                    },
-                                    {
-                                        type: 'listbox',
-                                        name: 'btnTarget',
-                                        label: 'Open in: ',
-                                        values: [
-                                            { text: 'New Window', value: '_blank'},
-                                            { text: 'Same Window', value: '_self'}
-                                        ],
-                                        value: 'false'
-                                    },
-                                    {
-                                        type: 'listbox',
-                                        name: 'alignment',
-                                        label: 'Align: ',
-                                        values: [
-                                            { text: 'Left', value: 'left'},
-                                            { text: 'Center', value: 'center'},
-                                            { text: 'Right', value: 'right'}
-                                        ],
-                                        value: 'left'
-                                    }
-                                ],
-                                onsubmit: function (e) {
-                                    ed.insertContent('[button href="' + e.data.btnUrl + '" target="' + e.data.btnTarget + '" style="' + e.data.style + '" alignment="' + e.data.alignment + '" color="' + e.data.color + '"]' + ed.selection.getContent() + '[/button]');
-                                }
-                            });
+                              title: 'Button Settings',
+                              body: [
+                                {
+                                  type: 'textbox',
+                                  name: 'btnUrl',
+                                  label: 'Button URL: ',
+                                },
+                                {
+                                  type: 'listbox',
+                                  name: 'style',
+                                  label: 'Style: ',
+                                  values: [
+                                    { text: 'Primary', value: 'primary' },
+                                    { text: 'Secondary', value: 'secondary' },
+                                  ],
+                                  value: 'primary',
+                                },
+                                {
+                                  type: 'listbox',
+                                  name: 'color',
+                                  label: 'Color: ',
+                                  values: [
+                                    { text: 'Normal', value: 'normal' },
+                                    { text: 'Alternative', value: 'alt' },
+                                  ],
+                                  value: 'normal',
+                                },
+                                {
+                                  type: 'listbox',
+                                  name: 'btnTarget',
+                                  label: 'Open in: ',
+                                  values: [
+                                    { text: 'New Window', value: '_blank' },
+                                    { text: 'Same Window', value: '_self' },
+                                  ],
+                                  value: 'false',
+                                },
+                                {
+                                  type: 'listbox',
+                                  name: 'alignment',
+                                  label: 'Align: ',
+                                  values: [
+                                    { text: 'Left', value: 'left' },
+                                    { text: 'Center', value: 'center' },
+                                    { text: 'Right', value: 'right' },
+                                  ],
+                                  value: 'left',
+                                },
+                                {
+                                  type: 'textbox',
+                                  name: 'id',
+                                  label: 'ID',
+                                },
+                              ],
+                              onsubmit: function (e) {
+                                ed.insertContent(
+                                  '[button href="' +
+                                    e.data.btnUrl +
+                                    '" target="' +
+                                    e.data.btnTarget +
+                                    '" style="' +
+                                    e.data.style +
+                                    '" alignment="' +
+                                    e.data.alignment +
+                                    '" color="' +
+                                    e.data.color +
+                                    '"]' +
+                                    ed.selection.getContent() +
+                                    '[/button]'
+                                )
+                              },
+                            })
                         }
                     },
                     {
