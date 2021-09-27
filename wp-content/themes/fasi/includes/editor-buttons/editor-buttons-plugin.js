@@ -215,6 +215,8 @@
                                     e.data.alignment +
                                     '" color="' +
                                     e.data.color +
+                                    '" id="' +
+                                    e.data.id +
                                     '"]' +
                                     ed.selection.getContent() +
                                     '[/button]'
