@@ -250,6 +250,15 @@
   content: "\ea28";
 }
 
+/* Tailwind-like utility classes created to make dev easier for Andrew */
+.text-purple, .fat-purple {
+  color: #6a4991;
+}
+
+.font-medium, .fat-purple {
+  font-weight: 500;
+}
+
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */

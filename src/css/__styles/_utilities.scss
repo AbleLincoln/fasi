@@ -1,0 +1,14 @@
+/* Tailwind-like utility classes created to make dev easier for Andrew */
+
+.text-purple {
+    color: $purple
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.fat-purple {
+    @extend .text-purple;
+    @extend .font-medium;
+}
