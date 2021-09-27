@@ -20,7 +20,7 @@ function button( $atts, $content ) {
 
     $class = 'c-btn c-btn-' . $style . ' c-btn-color-' . $color;
 
-    return "<div id='$id' class='c-btn-wrapper text-$alignment'><a href='$href' class='$class' target='$target'><span>$content</span></a></div>";
+    return "<div class='c-btn-wrapper text-$alignment'><a href='$href' id='$id' class='$class' target='$target'><span>$content</span></a></div>";
 }
 add_shortcode( 'button', 'BaseTheme\Shortcodes\button' );
 
