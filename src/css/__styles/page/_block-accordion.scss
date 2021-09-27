@@ -97,6 +97,10 @@
                 &-grid {
                     display: grid; 
                     grid-template-columns: 40% 60%;
+
+                    &:nth-child(odd) {
+                        justify-self: center;
+                    }
                 }
             }
 
