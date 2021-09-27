@@ -4514,6 +4514,10 @@ blockquote {
   display: none;
   margin-bottom: 52px;
 }
+.block-accordion__accordion-item-content-grid {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
 .block-accordion__accordion-item.open .block-accordion__accordion-item-content {
   display: block;
 }
