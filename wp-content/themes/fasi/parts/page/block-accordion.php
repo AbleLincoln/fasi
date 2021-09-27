@@ -29,7 +29,7 @@ $accordion = get_sub_field('accordion');
         <div class="container">
             <div class="row">
                 <?php if (!empty($subhead) || !empty($headline) || !empty($content)) : ?>
-                    <div class="block-accordion__content col-12 col-lg-9">
+                    <div class="block-accordion__content col-12">
                         <?php echo !empty($subhead) ? '<p class="overline">' . $subhead . '</p>' : ''; ?>
                         <?php echo !empty($headline) ? '<h2 class="h3">' . $headline . '</h2>' : ''; ?>
                         <?php echo !empty($content) ? $content : ''; ?>
