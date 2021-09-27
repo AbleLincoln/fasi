@@ -97,6 +97,7 @@
                 &-grid {
                     display: grid; 
                     grid-template-columns: 40% 60%;
+                    row-gap: 22px;
 
                     &:nth-child(odd) {
                         justify-self: center;

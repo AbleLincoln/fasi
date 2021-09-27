@@ -4517,6 +4517,7 @@ blockquote {
 .block-accordion__accordion-item-content-grid {
   display: grid;
   grid-template-columns: 40% 60%;
+  row-gap: 22px;
 }
 .block-accordion__accordion-item-content-grid:nth-child(odd) {
   justify-self: center;
