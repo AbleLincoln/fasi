@@ -14,12 +14,13 @@ function button( $atts, $content ) {
         'style' => 'primary',
         'color' => 'normal',
         'alignment' => 'left',
-        'target' => '_self'
+        'target' => '_self',
+        'id' => ''
     ), $atts ));
 
     $class = 'c-btn c-btn-' . $style . ' c-btn-color-' . $color;
 
-    return "<div class='c-btn-wrapper text-$alignment'><a href='$href' class='$class' target='$target'><span>$content</span></a></div>";
+    return "<div id='$id' class='c-btn-wrapper text-$alignment'><a href='$href' class='$class' target='$target'><span>$content</span></a></div>";
 }
 add_shortcode( 'button', 'BaseTheme\Shortcodes\button' );
 
