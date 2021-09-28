@@ -24,6 +24,22 @@ function button( $atts, $content ) {
 }
 add_shortcode( 'button', 'BaseTheme\Shortcodes\button' );
 
+// Reveal Button
+function reveal_button($atts, $content)
+{
+    extract(shortcode_atts(array(
+        'style' => 'primary',
+        'color' => 'normal',
+        'alignment' => 'left',
+        'target_id' => ''
+    ), $atts));
+
+    $class = 'c-btn c-btn-' . $style . ' c-btn-color-' . $color;
+
+    return "<div class='c-btn-wrapper text-$alignment'><button class='$class' onclick='(() => {document.getElementById('$target_id').style.display = 'block'})()'><span>$content</span></button></div>";
+}
+add_shortcode('reveal_button', 'BaseTheme\Shortcodes\button');
+
 // Group buttons
 function group_buttons( $atts, $content ) {
     return "<div class='c-btn-group'>" . do_shortcode($content) ."</div>";
