@@ -36,7 +36,15 @@ function reveal_button($atts, $content)
 
     $class = 'c-btn c-btn-' . $style . ' c-btn-color-' . $color;
 
-    return "<div class='c-btn-wrapper text-$alignment'><button class='$class' onclick='(() => {document.getElementById(\"$target_id\").classList.remove(\"hidden\"); this.classList.add(\"hidden\");})()'><span>$content</span></button></div>";
+    return "<div class='c-btn-wrapper text-$alignment'><button class='$class' onclick='reveal()'><span>$content</span></button></div>
+        <script>
+        function reveal() {
+            console.log('reeee');
+            document.getElementById('$target_id').classList.remove('hidden'); 
+            this.classList.add('hidden');
+        }
+        </script>
+    ";
 }
 add_shortcode('reveal_button', 'BaseTheme\Shortcodes\reveal_button');
 
