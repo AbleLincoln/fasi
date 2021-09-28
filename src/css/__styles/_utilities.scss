@@ -12,3 +12,7 @@
     @extend .text-purple;
     @extend .font-medium;
 }
+
+.hidden {
+    display: none!important;
+}

@@ -259,6 +259,10 @@
   font-weight: 500;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
