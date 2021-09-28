@@ -38,7 +38,7 @@ function reveal_button($atts, $content)
 
     return "<div class='c-btn-wrapper text-$alignment'><button class='$class' onclick='(() => {document.getElementById('$target_id').classList.remove('hidden'); this.classList.add('hidden');})()'><span>$content</span></button></div>";
 }
-add_shortcode('reveal_button', 'BaseTheme\Shortcodes\button');
+add_shortcode('reveal_button', 'BaseTheme\Shortcodes\reveal_button');
 
 // Group buttons
 function group_buttons( $atts, $content ) {
