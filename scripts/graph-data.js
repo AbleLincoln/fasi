@@ -20,11 +20,12 @@ exports.prevalance = {
   outputFile: 'generated/prevalence.png',
   datasets: [
     {
-      data: [11.5, 10, 10.5, 11.33, 12.6, 14, 16, 19, 22, 27, 32],
+      //     97   99    01    03   05  07  09  11  13  15  17  19
+      data: [7.5, 8, 8.5, 9.25, 9.99, 10.66, 11.5, 12.5, 14, 17, 21, 26],
       label: 'Adults',
     },
     {
-      data: [2.5, 2.75, 3, 3.25, 3.5, 4, 4.5, 5, 5.5, 6, 6.5],
+      data: [2.5, 2.75, 3, 3.25, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7],
       label: 'Children',
     },
   ],
@@ -35,7 +36,7 @@ exports.prevalance = {
     step: 2,
   },
   yAxis: {
-    labels: Array(8)
+    labels: Array(7)
       .fill()
       .map((_, i) => i * 5),
     step: 1,

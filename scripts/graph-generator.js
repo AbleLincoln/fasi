@@ -105,7 +105,7 @@ function plotData(
   { length: yAxisLength, labels }
 ) {
   const pixelMappedData = data.map((point, i) => {
-    x = x0 + i * (xAxis.length / data.length)
+    x = x0 + i * (xAxis.length / (data.length - 1))
     y = y0 - point * (yAxisLength / (labels[labels.length - 1] - labels[0]))
     return [x, y]
   })
