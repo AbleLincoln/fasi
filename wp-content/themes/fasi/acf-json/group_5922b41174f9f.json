@@ -3427,35 +3427,6 @@
                             "step": ""
                         },
                         {
-                            "key": "field_609d45a753909",
-                            "label": "Featured Posts",
-                            "name": "featured_posts",
-                            "type": "relationship",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "post_type": [
-                                "post"
-                            ],
-                            "taxonomy": "",
-                            "filters": [
-                                "search",
-                                "post_type",
-                                "taxonomy"
-                            ],
-                            "elements": [
-                                "featured_image"
-                            ],
-                            "min": "",
-                            "max": "",
-                            "return_format": "id"
-                        },
-                        {
                             "key": "field_6064a9038ebe8",
                             "label": "Background Image",
                             "name": "background_image",
@@ -4349,6 +4320,21 @@
                             "ui": 1,
                             "ui_on_text": "",
                             "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_6158e2afd5519",
+                            "label": "Background color",
+                            "name": "background_color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": ""
                         }
                     ],
                     "min": "",
@@ -5848,5 +5834,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1620922197
+    "modified": 1633215234
 }
