@@ -4,12 +4,16 @@
     color: $purple
 }
 
+.text-blue-med-dark {
+    color: $blue-med-dark;
+}
+
 .font-medium {
     font-weight: 500;
 }
 
 .fat-purple {
-    @extend .text-purple;
+    @extend .text-blue-med-dark; // too lazy to change entire class name so this will do
     @extend .font-medium;
 }
 

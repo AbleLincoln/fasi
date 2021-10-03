@@ -251,8 +251,12 @@
 }
 
 /* Tailwind-like utility classes created to make dev easier for Andrew */
-.text-purple, .fat-purple {
+.text-purple {
   color: #6a4991;
+}
+
+.text-blue-med-dark, .fat-purple {
+  color: #02599A;
 }
 
 .font-medium, .fat-purple {
