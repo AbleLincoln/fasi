@@ -1347,7 +1347,6 @@ hr {
   min-width: 140px;
   padding: 11px 30px;
   position: relative;
-  overflow: hidden;
   transition: all 0.2s linear;
   text-align: center;
   text-transform: uppercase;
@@ -1841,7 +1840,7 @@ li.gfield {
 
 button[type=submit] {
   cursor: pointer;
-  text-indent: -9999px;
+  text-indent: -120px;
   height: 40px;
   width: 40px;
   min-width: 40px;
