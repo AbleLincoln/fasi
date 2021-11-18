@@ -942,6 +942,9 @@ html.user-tab-nav textarea:focus {
   color: #fff;
 }
 
+.block-content {
+  overflow-x: hidden;
+}
 .block-content:last-child {
   border-bottom: 1px solid #d5d9de;
 }

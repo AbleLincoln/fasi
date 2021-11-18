@@ -314,6 +314,8 @@ textarea {
 }
 
 .block-content {
+    overflow-x: hidden;
+    
     &:last-child {
         border-bottom: 1px solid $color-2;
     }
