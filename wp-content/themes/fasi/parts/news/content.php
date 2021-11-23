@@ -13,7 +13,7 @@ if (have_posts()) :
 	<section class="news-archive">
 		<div class="container">
 			<div class="row">
-				<div class="news-archive__filters col-12">
+				<div class="news-archive__filters col-12 hidden">
 					<form method="get">
 						<?php $categories = get_categories(); ?>
 						<div class="news-archive__select">
