@@ -5013,11 +5013,6 @@ blockquote {
   padding-top: 90px;
   padding-bottom: 70px;
 }
-.main-footer__top p.h6 {
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 15px;
-}
 .main-footer__top p {
   font-size: 14px;
   line-height: 22px;
@@ -5049,7 +5044,18 @@ blockquote {
   color: #3C67FF;
 }
 .main-footer__newsletter {
-  padding-top: 7px;
+  background-color: #001733;
+  color: white;
+  padding-top: 15px;
+  padding: 20px;
+  padding-bottom: 60px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.main-footer__newsletter p.h6 {
+  color: white;
+  font-weight: 300;
+  font-size: 150%;
+  margin-bottom: 25px;
 }
 .main-footer__copyright p {
   font-size: 12px;

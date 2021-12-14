@@ -20,12 +20,6 @@
         padding-top: 90px;
         padding-bottom: 70px;
 
-        p.h6 {
-            text-transform: uppercase;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
         p {
             font-size: 14px;
             line-height: 22px;
@@ -69,7 +63,21 @@
     }
 
     &__newsletter {
-        padding-top: 7px;
+        background-color: $blue-dark;
+        color: white;
+
+        padding-top: 15px;
+        padding: 20px;
+        padding-bottom: 60px;
+
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        p.h6 {
+            color: white;
+            font-weight: 300;
+            font-size: 150%;
+            margin-bottom: 25px;
+        }
     }
 
     &__copyright {
