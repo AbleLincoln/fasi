@@ -57,7 +57,43 @@ if (have_posts()) :
 																	} ?>">
 										<?php if ($video_iframe) {
 											echo oembed_video_wrapper($video_iframe, $video_url, $thumbnail_url);
-										} else { ?>
+										} elseif ($pdf) {
+											$elemId = "pdf-modal-" . get_the_ID(); ?>
+
+											<a id="<?php echo $elemId ?>">
+												<?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'news'); ?>
+												<?php $image_caption = wp_get_attachment_caption(get_post_thumbnail_id()); ?>
+												<?php if (!empty($image_caption)) { ?>
+													<p class="image-caption"><?php echo esc_html($image_caption); ?></p>
+												<?php } ?>
+												<span class="news-archive__arrow"></span>
+											</a>
+
+											<script>
+												document.getElementById("<?php echo $elemId ?>").addEventListener('click', function() {
+													var adobeDCView = new AdobeDC.View({
+														clientId: "c679fbed1b8b46c2910f948e374bffff"
+													});
+													adobeDCView.previewFile({
+														content: {
+															location: {
+																url: "<?php echo $pdf['url']; ?>"
+															}
+														},
+														metaData: {
+															fileName: "<?php echo $pdf['filename'] ?>"
+														}
+													}, {
+														embedMode: "LIGHT_BOX",
+														showPageControls: false,
+														showDownloadPDF: false,
+														showPrintPDF: false
+													});
+												})
+											</script>
+
+
+										<?php } else { ?>
 											<a href="<?php echo $link; ?>" <?php echo $target; ?>>
 												<?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'news'); ?>
 												<?php $image_caption = wp_get_attachment_caption(get_post_thumbnail_id()); ?>
@@ -81,36 +117,7 @@ if (have_posts()) :
 									?> - <?php the_time('m.d.y'); ?>
 								</div>
 								<h2 class="news-archive__title">
-									<?php if ($pdf) : ?>
-										<?php $elemId = "pdf-modal-" . get_the_ID() ?>
-										<a id="<?php echo $elemId ?>"><?php the_title(); ?></a>
-
-										<script>
-											document.getElementById("<?php echo $elemId ?>").addEventListener('click', function() {
-												var adobeDCView = new AdobeDC.View({
-													clientId: "c679fbed1b8b46c2910f948e374bffff"
-												});
-												adobeDCView.previewFile({
-													content: {
-														location: {
-															url: "<?php echo $pdf['url']; ?>"
-														}
-													},
-													metaData: {
-														fileName: "<?php echo $pdf['filename'] ?>"
-													}
-												}, {
-													embedMode: "LIGHT_BOX",
-													showPageControls: false,
-													showDownloadPDF: false,
-													showPrintPDF: false
-												});
-											})
-										</script>
-
-									<?php else : ?>
-										<a href="<?php echo $video_url ? $video_url : $link; ?>" target="_blank"><?php the_title(); ?></a>
-									<?php endif; ?>
+									<a href="<?php echo $video_url ? $video_url : $link; ?>" target="_blank"><?php the_title(); ?></a>
 								</h2>
 							</article>
 						<?php endwhile; ?>
