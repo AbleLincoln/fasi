@@ -47,7 +47,8 @@ if (have_posts()) :
 
 							$video_iframe = get_field('video_thumbnail') ? get_field('video_thumbnail') : false;
 							$video_url = get_field('video_thumbnail') ? get_field('video_thumbnail', false, false) : false;
-							$thumbnail_url = get_the_post_thumbnail_url()
+							$thumbnail_url = get_the_post_thumbnail_url();
+							$pdf = get_field('pdf');
 						?>
 							<article class="news-archive__post col-12 col-lg-6">
 								<?php if (get_post_thumbnail_id() || $video_iframe) : ?>
@@ -80,11 +81,43 @@ if (have_posts()) :
 									?> - <?php the_time('m.d.y'); ?>
 								</div>
 								<h2 class="news-archive__title">
-									<a href="<?php echo $video_url ? $video_url : $link; ?>" target="_blank"><?php the_title(); ?></a>
+									<?php if ($pdf) : ?>
+										<?php $elemId = "pdf-modal-" . get_the_ID() ?>
+										<a id="<?php echo $elemId ?>"><?php the_title(); ?></a>
+
+										<script>
+											document.getElementById("<?php echo $elemId ?>").addEventListener('click', function() {
+												var adobeDCView = new AdobeDC.View({
+													clientId: "c679fbed1b8b46c2910f948e374bffff"
+												});
+												adobeDCView.previewFile({
+													content: {
+														location: {
+															url: "<?php echo $pdf['url']; ?>"
+														}
+													},
+													metaData: {
+														fileName: "<?php echo $pdf['filename'] ?>"
+													}
+												}, {
+													embedMode: "LIGHT_BOX",
+													showPageControls: false,
+													showDownloadPDF: false,
+													showPrintPDF: false
+												});
+											})
+										</script>
+
+									<?php else : ?>
+										<a href="<?php echo $video_url ? $video_url : $link; ?>" target="_blank"><?php the_title(); ?></a>
+									<?php endif; ?>
 								</h2>
 							</article>
 						<?php endwhile; ?>
 
+						<!-- Embed PDF viewer -->
+						<div id="adobe-dc-view"></div>
+						<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 					</div>
 				</div>
 

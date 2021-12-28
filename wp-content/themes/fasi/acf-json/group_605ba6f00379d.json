@@ -33,6 +33,44 @@
             },
             "width": "",
             "height": ""
+        },
+        {
+            "key": "field_61ca48532b9a0",
+            "label": "Blurb",
+            "name": "blurb",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 500
+        },
+        {
+            "key": "field_61ca64238f972",
+            "label": "PDF",
+            "name": "pdf",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -52,5 +90,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1620221103
+    "modified": 1640686137
 }
