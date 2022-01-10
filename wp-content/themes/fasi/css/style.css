@@ -3366,9 +3366,12 @@ blockquote {
   display: flex;
   align-items: center;
 }
+.block-challenge__stat .stat-icon {
+  width: 100px;
+  margin-right: 70px;
+}
 .block-challenge__stat .stat-container {
   display: block;
-  width: 325px;
 }
 @media (max-width: 767px) {
   .block-challenge__stat .stat-container {
@@ -3404,6 +3407,7 @@ blockquote {
 }
 .block-challenge__stat span.stat-content {
   margin-left: 32px;
+  max-width: 350px;
 }
 .block-challenge__stat span.stat-full {
   white-space: nowrap;

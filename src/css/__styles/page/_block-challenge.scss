@@ -48,9 +48,13 @@
       align-items: center;
     }
 
+    .stat-icon {
+      width: 100px;
+      margin-right: 70px;
+    }
+
     .stat-container {
       display: block;
-      width: 325px;
 
       @include sm() {
         width: 100px;
@@ -90,6 +94,7 @@
 
       &.stat-content {
         margin-left: 32px;
+        max-width: 350px;
       }
 
       &.stat-full {
