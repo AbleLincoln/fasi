@@ -22,10 +22,16 @@ $subhead = get_sub_field('section_subhead');
 $headline = get_sub_field('section_headline');
 $content = get_sub_field('content');
 $accordion = get_sub_field('accordion');
+
+$bg_color = get_sub_field('background_color');
+$attr_style = '';
+if (!empty($bg_color)) {
+    $attr_style .= 'background-color:' . $bg_color . ';';
+}
 ?>
 
-<section <?php echo $anchor; ?>class="<?php echo $main_block_class; ?>">
-    <div class="container">
+<section <?php echo $anchor; ?>class="<?php echo $main_block_class; ?>" style="<?php echo $attr_style; ?>">
+    <div class=" container">
         <div class="row">
             <?php if (!empty($subhead) || !empty($headline) || !empty($content)) : ?>
                 <div class="block-accordion__content col-12">
