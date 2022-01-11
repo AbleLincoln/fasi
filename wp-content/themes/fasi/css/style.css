@@ -4569,6 +4569,11 @@ blockquote {
 .block-pretty-window [class^=col-]:last-child .inner {
   border-left: 0;
 }
+.block-pretty-window .inner {
+  height: 100%;
+  padding: 30px;
+  border: 10px solid #2865ff;
+}
 
 .hero-staff {
   background: #3C67FF;
