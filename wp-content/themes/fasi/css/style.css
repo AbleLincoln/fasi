@@ -4552,6 +4552,24 @@ blockquote {
   transform: rotate(0deg);
 }
 
+.block-pretty-window [class^=col-] {
+  padding: 25px;
+}
+.block-pretty-window [class^=col-]:first-child {
+  padding-right: 0;
+  background-position: 50% 50%;
+  background-size: 100%;
+}
+.block-pretty-window [class^=col-]:first-child .inner {
+  border-right: 0;
+}
+.block-pretty-window [class^=col-]:last-child {
+  padding-left: 0;
+}
+.block-pretty-window [class^=col-]:last-child .inner {
+  border-left: 0;
+}
+
 .hero-staff {
   background: #3C67FF;
   background: linear-gradient(68deg, #3C67FF -80%, #001733 45%, #001733 100%);

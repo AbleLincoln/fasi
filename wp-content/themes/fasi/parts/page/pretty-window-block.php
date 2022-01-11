@@ -19,11 +19,15 @@ $image_url = get_sub_field('image');
     <div class="container">
         <div class="row">
             <div class="col-lg-6" style="background-image: url(<?php the_sub_field('image'); ?>)">
-                <h2><?php the_sub_field('title'); ?></h2>
+                <div class="inner">
+                    <h2><?php the_sub_field('title'); ?></h2>
+                </div>
             </div>
 
             <div class="col-lg-6">
-                <?php the_sub_field('content'); ?>
+                <div class="inner">
+                    <?php the_sub_field('content'); ?>
+                </div>
             </div>
         </div>
     </div>
