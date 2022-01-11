@@ -11,3 +11,7 @@
     // chevron shape
     clip-path: polygon(100% 0%, 92% 50%, 100% 100%, 8% 100%, 0% 50%, 8% 0%);
 }
+
+.content-column {
+    position: relative; // needed for floater class
+}

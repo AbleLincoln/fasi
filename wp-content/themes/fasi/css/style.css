@@ -259,6 +259,11 @@
   color: #02599A;
 }
 
+.text-big {
+  font-size: 175%;
+  line-height: 1.5em;
+}
+
 .font-medium, .fat-purple {
   font-weight: 500;
 }
@@ -5083,6 +5088,10 @@ blockquote {
   background-color: #242424;
   color: white;
   clip-path: polygon(100% 0%, 92% 50%, 100% 100%, 8% 100%, 0% 50%, 8% 0%);
+}
+
+.content-column {
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */
