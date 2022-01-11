@@ -23,8 +23,8 @@ $headline = get_sub_field('section_headline');
 $content = get_sub_field('content');
 $accordion = get_sub_field('accordion');
 
+$attr_style = get_sub_field('style');
 $bg_color = get_sub_field('background_color');
-$attr_style = '';
 if (!empty($bg_color)) {
     $attr_style .= 'background-color:' . $bg_color . ';';
 }
