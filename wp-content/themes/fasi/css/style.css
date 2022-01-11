@@ -4559,6 +4559,8 @@ blockquote {
   padding-right: 0;
   background-position: 50% 50%;
   background-size: 100%;
+  background-size: 105%;
+  background-repeat: no-repeat;
 }
 .block-pretty-window [class^=col-]:first-child .inner {
   border-right: 0;
