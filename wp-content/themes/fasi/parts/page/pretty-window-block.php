@@ -20,7 +20,7 @@ $image_url = get_sub_field('image');
         <div class="row">
             <div class="col-lg-6" style="background-image: url(<?php the_sub_field('image'); ?>)">
                 <div class="inner">
-                    <h2><?php the_sub_field('title'); ?></h2>
+                    <h2 class="title"><?php the_sub_field('title'); ?></h2>
                 </div>
             </div>
 
