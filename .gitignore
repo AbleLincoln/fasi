@@ -3,3 +3,4 @@ node_modules
 *.sql
 wp-content/*
 !wp-content/themes
+wp-content/themes/fasi/acf-json
