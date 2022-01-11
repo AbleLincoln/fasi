@@ -35,6 +35,7 @@ class ContentBlock {
         'block_image_accordion'         => 'page/block-image-accordion',
         'block_accordion'               => 'page/block-accordion',
         'universal_block'               => 'page/universal-block',
+        'pretty_window_block'           => 'page/pretty-window-block',
     );
 
     private function __construct(){}
