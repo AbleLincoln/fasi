@@ -267,6 +267,16 @@
   display: none !important;
 }
 
+.floater {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateX(90%);
+  padding: 30px;
+  background-color: #2765ff;
+  color: white;
+}
+
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
