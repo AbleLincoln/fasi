@@ -24,38 +24,36 @@ $content = get_sub_field('content');
 $accordion = get_sub_field('accordion');
 ?>
 
-<?php if (!empty($subhead) || !empty($headline) || !empty($content)) : ?>
-    <section <?php echo $anchor; ?>class="<?php echo $main_block_class; ?>">
-        <div class="container">
-            <div class="row">
-                <?php if (!empty($subhead) || !empty($headline) || !empty($content)) : ?>
-                    <div class="block-accordion__content col-12">
-                        <?php echo !empty($subhead) ? '<p class="overline">' . $subhead . '</p>' : ''; ?>
-                        <?php echo !empty($headline) ? '<h2 class="h3">' . $headline . '</h2>' : ''; ?>
-                        <?php echo !empty($content) ? $content : ''; ?>
-                    </div>
-                <?php endif; ?>
-                <?php if (!empty($accordion)) : ?>
-                    <div class="block-accordion__accordion-container col-12">
-                        <div class="block-accordion__accordion">
-                            <?php
-                            $count = 0;
-                            foreach ($accordion as $item) {
-                                $count++;
-                            ?>
-                                <div class="block-accordion__accordion-item">
-                                    <div class="block-accordion__accordion-item-title">
-                                        <button><?php echo $item['title']; ?></button>
-                                    </div>
-                                    <div class="block-accordion__accordion-item-content">
-                                        <?php echo $item['content']; ?>
-                                    </div>
+<section <?php echo $anchor; ?>class="<?php echo $main_block_class; ?>">
+    <div class="container">
+        <div class="row">
+            <?php if (!empty($subhead) || !empty($headline) || !empty($content)) : ?>
+                <div class="block-accordion__content col-12">
+                    <?php echo !empty($subhead) ? '<p class="overline">' . $subhead . '</p>' : ''; ?>
+                    <?php echo !empty($headline) ? '<h2 class="h3">' . $headline . '</h2>' : ''; ?>
+                    <?php echo !empty($content) ? $content : ''; ?>
+                </div>
+            <?php endif; ?>
+            <?php if (!empty($accordion)) : ?>
+                <div class="block-accordion__accordion-container col-12">
+                    <div class="block-accordion__accordion">
+                        <?php
+                        $count = 0;
+                        foreach ($accordion as $item) {
+                            $count++;
+                        ?>
+                            <div class="block-accordion__accordion-item">
+                                <div class="block-accordion__accordion-item-title">
+                                    <button><?php echo $item['title']; ?></button>
                                 </div>
-                            <?php } ?>
-                        </div>
+                                <div class="block-accordion__accordion-item-content">
+                                    <?php echo $item['content']; ?>
+                                </div>
+                            </div>
+                        <?php } ?>
                     </div>
-                <?php endif; ?>
-            </div>
+                </div>
+            <?php endif; ?>
         </div>
-    </section>
-<?php endif; ?>
+    </div>
+</section>
