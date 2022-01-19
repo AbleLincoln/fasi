@@ -281,6 +281,12 @@
   background-color: #2765ff;
   color: white;
 }
+@media (max-width: 767px) {
+  .floater {
+    position: unset;
+    transform: unset;
+  }
+}
 
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document

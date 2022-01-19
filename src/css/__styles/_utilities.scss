@@ -35,4 +35,9 @@
 
     background-color: #2765ff;
     color: white;
+
+    @include sm {
+        position: unset;
+        transform: unset;
+    }
 }
