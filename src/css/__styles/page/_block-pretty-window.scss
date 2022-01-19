@@ -1,6 +1,6 @@
 .block-pretty-window {
     $padding: 25px;
-    $border: 10px;
+    $border:  10px solid #2865ff;
 
     [class^="col-"] {
         padding: $padding;
@@ -52,7 +52,7 @@
 
         height: 100%;
         padding: 30px;
-        border: 10px solid #2865ff;
+        border: $border;
 
         .title {
             color: white;

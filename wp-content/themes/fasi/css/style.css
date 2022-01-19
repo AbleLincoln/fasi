@@ -4572,7 +4572,7 @@ blockquote {
 }
 @media (max-width: 991px) {
   .block-pretty-window [class^=col-]:first-child .inner {
-    border-right: 10px;
+    border-right: 10px solid #2865ff;
     border-bottom: 0;
   }
 }
@@ -4589,7 +4589,7 @@ blockquote {
 }
 @media (max-width: 991px) {
   .block-pretty-window [class^=col-]:last-child .inner {
-    border-left: 10px;
+    border-left: 10px solid #2865ff;
     border-top: 0;
   }
 }
