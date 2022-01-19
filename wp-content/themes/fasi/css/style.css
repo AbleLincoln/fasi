@@ -3385,6 +3385,11 @@ blockquote {
   width: 100px;
   margin-right: 70px;
 }
+@media (max-width: 767px) {
+  .block-challenge__stat .stat-icon {
+    display: none;
+  }
+}
 .block-challenge__stat .stat-container {
   display: block;
 }

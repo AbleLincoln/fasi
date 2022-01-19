@@ -51,6 +51,10 @@
     .stat-icon {
       width: 100px;
       margin-right: 70px;
+
+      @include sm() {
+        display: none;
+      }
     }
 
     .stat-container {
