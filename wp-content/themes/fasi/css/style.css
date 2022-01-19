@@ -4570,11 +4570,28 @@ blockquote {
 .block-pretty-window [class^=col-]:first-child .inner {
   border-right: 0;
 }
+@media (max-width: 991px) {
+  .block-pretty-window [class^=col-]:first-child .inner {
+    border-right: 10px;
+    border-bottom: 0;
+  }
+}
 .block-pretty-window [class^=col-]:last-child {
   padding-left: 0;
 }
+@media (max-width: 991px) {
+  .block-pretty-window [class^=col-]:last-child {
+    padding-left: 25px;
+  }
+}
 .block-pretty-window [class^=col-]:last-child .inner {
   border-left: 0;
+}
+@media (max-width: 991px) {
+  .block-pretty-window [class^=col-]:last-child .inner {
+    border-left: 10px;
+    border-top: 0;
+  }
 }
 .block-pretty-window .inner {
   display: flex;

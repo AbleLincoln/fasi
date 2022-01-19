@@ -1,12 +1,15 @@
 .block-pretty-window {
+    $padding: 25px;
+    $border: 10px;
+
     [class^="col-"] {
-        padding: 25px;
+        padding: $padding;
 
         &:first-child {
             padding-right: 0;
 
             @include md {
-                padding-right: 25px;
+                padding-right: $padding;
             }
 
             background-position: 50% 50%;
@@ -16,14 +19,28 @@
 
             .inner {
                 border-right: 0;
+
+                @include md {
+                    border-right: $border;
+                    border-bottom: 0;
+                }
             }
         }
 
         &:last-child {
             padding-left: 0;
 
+            @include md {
+                padding-left: $padding;
+            }
+
             .inner {
                 border-left: 0;
+
+                @include md {
+                    border-left: $border;
+                    border-top: 0;
+                }
             }
         }
     }
