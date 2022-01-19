@@ -10,6 +10,7 @@
 
             @include md {
                 padding-right: $padding;
+                padding-bottom: 0px;
             }
 
             background-position: 50% 50%;
@@ -32,6 +33,7 @@
 
             @include md {
                 padding-left: $padding;
+                padding-top: 0px;
             }
 
             .inner {
