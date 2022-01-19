@@ -3390,7 +3390,6 @@ blockquote {
 }
 @media (max-width: 767px) {
   .block-challenge__stat .stat-container {
-    width: 100px;
     flex-basis: 100px;
     flex-grow: 0;
     flex-shrink: 0;

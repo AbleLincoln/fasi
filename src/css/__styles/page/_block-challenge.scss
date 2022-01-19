@@ -57,7 +57,6 @@
       display: block;
 
       @include sm() {
-        width: 100px;
         flex-basis: 100px;
         flex-grow: 0;
         flex-shrink: 0;
