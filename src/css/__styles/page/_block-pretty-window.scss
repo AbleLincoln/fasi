@@ -5,6 +5,10 @@
         &:first-child {
             padding-right: 0;
 
+            @include md {
+                padding-right: 25px;
+            }
+
             background-position: 50% 50%;
             background-size: 100%;
             background-size: 105%;

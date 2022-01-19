@@ -4562,6 +4562,11 @@ blockquote {
   background-size: 105%;
   background-repeat: no-repeat;
 }
+@media (max-width: 991px) {
+  .block-pretty-window [class^=col-]:first-child {
+    padding-right: 25px;
+  }
+}
 .block-pretty-window [class^=col-]:first-child .inner {
   border-right: 0;
 }
