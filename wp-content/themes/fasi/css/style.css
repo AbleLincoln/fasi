@@ -1810,6 +1810,7 @@ li.gfield {
 }
 li.gfield.gsection {
   margin: 20px auto;
+  padding: 10px 0;
   border-bottom: 1px solid white;
 }
 li.gfield.gsection h2 {
