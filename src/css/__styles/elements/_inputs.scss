@@ -60,6 +60,16 @@ li.gfield {
   list-style: none;
   margin-bottom: 16px;
   clear: both;
+
+  .gsection {
+    margin: 20px auto;
+    border-bottom: 1px solid white;
+
+    h2 {
+      color: white;
+      font-weight: 100;
+    }
+  }
 }
 
 .ginput_container_radio,
