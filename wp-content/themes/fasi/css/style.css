@@ -5178,7 +5178,7 @@ blockquote {
 
 /* Random custom stuff Andrew has added for one-off styles */
 .sponsor {
-  max-width: 40%;
+  max-width: 300px;
   margin: 1.5rem auto;
   padding: 15px 35px;
   background-color: #242424;
