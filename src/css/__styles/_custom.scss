@@ -1,16 +1,27 @@
 /* Random custom stuff Andrew has added for one-off styles */
 
-.sponsor {
-    max-width: 300px;
-    margin: 1.5rem auto;
-    padding: 15px 35px;
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 
-    background-color: #242424;
-    color: white;
+    .sponsor {
+        flex-basis: 25%;
+        flex-shrink: 0;
+        max-width: 300px;
+        margin: 1.5rem auto;
+        padding: 15px 35px;
 
-    // chevron shape
-    clip-path: polygon(100% 0%, 92% 50%, 100% 100%, 8% 100%, 0% 50%, 8% 0%);
+        @include md {
+            flex-basis: 50%;
+        }
+
+        @include sm {
+            flex-basis: 100%;
+        }
+    }
 }
+
 
 .content-column {
     position: relative; // needed for floater class

@@ -41,3 +41,36 @@
         transform: unset;
     }
 }
+
+.divider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .125rem;
+    line-height: 2;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::before,
+    &::after {
+        display: block;
+        -ms-flex-preferred-size: 32px;
+        flex-basis: 32px;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        height: 1px;
+        background-color: #e9ecf0;
+        content: '';
+    }
+    &::before {
+        margin-right: 2rem;
+    }
+    
+    &::after {
+        margin-left: 2rem;
+    }
+}

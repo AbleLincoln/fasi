@@ -288,6 +288,36 @@
   }
 }
 
+.divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  line-height: 2;
+  text-align: center;
+  text-transform: uppercase;
+}
+.divider::before, .divider::after {
+  display: block;
+  -ms-flex-preferred-size: 32px;
+  flex-basis: 32px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  height: 1px;
+  background-color: #e9ecf0;
+  content: "";
+}
+.divider::before {
+  margin-right: 2rem;
+}
+.divider::after {
+  margin-left: 2rem;
+}
+
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1908,7 +1938,7 @@ button[type=submit]::before {
   }
   li.gf_left_third, li.gf_middle_third, li.gf_right_third {
     float: left;
-    width: calc(33.3% - (32px / 3));
+    width: calc(33.3% - 10.6666666667px);
   }
   li.gf_left_third, li.gf_middle_third {
     margin-right: 16px;
@@ -1944,7 +1974,7 @@ button[type=submit]::before {
   width: calc(50% - 8px) !important;
 }
 .hbspt-form .form-columns-3 > div {
-  width: calc(33.3% - (32px / 3)) !important;
+  width: calc(33.3% - 10.6666666667px) !important;
 }
 .hbspt-form .hs-richtext {
   margin-bottom: 16px;
@@ -5177,13 +5207,27 @@ blockquote {
 }
 
 /* Random custom stuff Andrew has added for one-off styles */
-.sponsor {
+.sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.sponsors .sponsor {
+  flex-basis: 25%;
+  flex-shrink: 0;
   max-width: 300px;
   margin: 1.5rem auto;
   padding: 15px 35px;
-  background-color: #242424;
-  color: white;
-  clip-path: polygon(100% 0%, 92% 50%, 100% 100%, 8% 100%, 0% 50%, 8% 0%);
+}
+@media (max-width: 991px) {
+  .sponsors .sponsor {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .sponsors .sponsor {
+    flex-basis: 100%;
+  }
 }
 
 .content-column {
