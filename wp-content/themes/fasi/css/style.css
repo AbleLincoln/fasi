@@ -2065,9 +2065,6 @@ blockquote {
 .single-accordion p:last-child {
   margin: 0;
 }
-.single-accordion.theme-dark {
-  border-color: white;
-}
 .single-accordion.active .single-accordion__title:after {
   margin-top: 9px;
   transform: rotate(-45deg);
@@ -4576,6 +4573,9 @@ blockquote {
 }
 .block-accordion__accordion-item.open .block-accordion__accordion-item-title button::after {
   transform: rotate(0deg);
+}
+.block-accordion.theme-dark {
+  color: white;
 }
 
 .block-pretty-window [class^=col-] {
