@@ -8,6 +8,10 @@
     color: $blue-med-dark;
 }
 
+.text-blue-med-light {
+    color: $blue-med-light;
+}
+
 .text-white {
     color: white;
 }
@@ -23,6 +27,11 @@
 
 .fat-purple {
     @extend .text-blue-med-dark; // too lazy to change entire class name so this will do
+    @extend .font-medium;
+}
+
+.fat-light-blue {
+    @extend .text-blue-med-light;
     @extend .font-medium;
 }
 
