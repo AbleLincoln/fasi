@@ -30,6 +30,11 @@
     @extend .font-medium;
 }
 
+.fat-blue {
+    @extend .text-blue-med-dark; // too lazy to change entire class name so this will do
+    @extend .font-medium;
+}
+
 .fat-blue-med-light {
     @extend .text-blue-med-light;
     @extend .font-medium;
