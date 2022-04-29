@@ -259,7 +259,7 @@
   color: #02599A;
 }
 
-.text-blue-med-light, .fat-light-blue {
+.text-blue-med-light, .fat-blue-med-light {
   color: #4673ff;
 }
 
@@ -272,7 +272,7 @@
   line-height: 1.5em;
 }
 
-.font-medium, .fat-light-blue, .fat-purple {
+.font-medium, .fat-blue-med-light, .fat-purple {
   font-weight: 500;
 }
 
