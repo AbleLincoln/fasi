@@ -276,6 +276,10 @@
   font-weight: 500;
 }
 
+.fat-blue-med-light {
+  color: red;
+}
+
 .hidden {
   display: none !important;
 }
