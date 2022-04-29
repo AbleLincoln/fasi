@@ -31,8 +31,7 @@ if (!empty($bg_color)) {
 $theme = get_sub_field('theme');
 ?>
 
-<section <?php echo $anchor; ?>class="<?php echo $main_block_class;
-                                        echo 'theme-' . $theme; ?>" style="<?php echo $attr_style; ?>">
+<section <?php echo $anchor; ?>class="<?php echo $main_block_class . ' ' . 'theme-' . $theme; ?>" style="<?php echo $attr_style; ?>">
     <div class=" container">
         <div class="row">
             <?php if (!empty($subhead) || !empty($headline) || !empty($content)) : ?>
