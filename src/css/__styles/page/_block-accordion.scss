@@ -123,5 +123,14 @@
 
     &.theme-dark {
         color: white;
+
+        button {
+            color: white;
+
+            &::before, 
+            &::after {
+                background-color: white;
+            }
+        }
     }
 }

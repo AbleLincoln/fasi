@@ -4577,6 +4577,12 @@ blockquote {
 .block-accordion.theme-dark {
   color: white;
 }
+.block-accordion.theme-dark button {
+  color: white;
+}
+.block-accordion.theme-dark button::before, .block-accordion.theme-dark button::after {
+  background-color: white;
+}
 
 .block-pretty-window [class^=col-] {
   padding: 25px;
