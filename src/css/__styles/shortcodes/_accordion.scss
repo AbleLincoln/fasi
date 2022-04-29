@@ -25,6 +25,9 @@
     {
         margin: 0;
     }
+    &.theme-dark {
+        border-color: white;
+    }
     &.active
     {
         .single-accordion__title

@@ -2065,6 +2065,9 @@ blockquote {
 .single-accordion p:last-child {
   margin: 0;
 }
+.single-accordion.theme-dark {
+  border-color: white;
+}
 .single-accordion.active .single-accordion__title:after {
   margin-top: 9px;
   transform: rotate(-45deg);
