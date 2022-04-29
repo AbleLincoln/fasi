@@ -124,6 +124,10 @@
     &.theme-dark {
         color: white;
 
+        .block-accordion__accordion-item {
+            border-color: white!important;
+        }
+
         button {
             color: white;
 
