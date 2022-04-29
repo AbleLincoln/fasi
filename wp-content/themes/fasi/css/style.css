@@ -276,6 +276,10 @@
   font-weight: 500;
 }
 
+.fat-blue {
+  color: blue;
+}
+
 .hidden {
   display: none !important;
 }
