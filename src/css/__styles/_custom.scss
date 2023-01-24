@@ -1,17 +1,19 @@
 /* Random custom stuff Andrew has added for one-off styles */
 
 .sponsor {
-    max-width: 300px;
-    margin: 1.5rem auto;
-    padding: 15px 35px;
+  max-width: 300px;
+  margin: 1.5rem auto;
+  padding: 25px 35px;
 
-    background-color: #ddd;
-    color: black;
+  background-color: #ddd;
+  color: black;
 
-    // chevron shape
-    clip-path: polygon(100% 0%, 92% 50%, 100% 100%, 8% 100%, 0% 50%, 8% 0%);
+  // chevron shape
+  clip-path: polygon(100% 0%, 92% 50%, 100% 100%, 8% 100%, 0% 50%, 8% 0%);
+
+  font-size: 25px;
 }
 
 .content-column {
-    position: relative; // needed for floater class
+  position: relative; // needed for floater class
 }
