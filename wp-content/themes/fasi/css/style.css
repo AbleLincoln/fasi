@@ -5206,6 +5206,9 @@ blockquote {
   clip-path: polygon(100% 0%, 92% 50%, 100% 100%, 8% 100%, 0% 50%, 8% 0%);
   font-size: 25px;
 }
+.sponsor.with-image {
+  padding: 10px 35px;
+}
 
 .content-column {
   position: relative;
