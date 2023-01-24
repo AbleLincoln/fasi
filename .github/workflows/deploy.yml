@@ -5,15 +5,15 @@ jobs:
     name: 🎉 Deploy
     runs-on: macos-11
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2
-    
-    - name: 📂 Sync files
-      uses: AbleLincoln/push-to-sftp@main
-      with:
-        host: 662.cf8.myftpupload.com
-        port: 22
-        username: b66244294086605
-        password: ${{ secrets.ftp_password }}
-        sourceDir: ./wp-content/themes/fasi/
-        targetDir: ./wp-content/themes/fasi/
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+
+      - name: 📂 Sync files
+        uses: AbleLincoln/push-to-sftp@main
+        with:
+          host: 662.cf8.myftpupload.com
+          port: 22
+          username: g0cLQEM40O7iqA
+          password: ${{ secrets.ftp_password }}
+          sourceDir: ./wp-content/themes/fasi/
+          targetDir: ./wp-content/themes/fasi/
