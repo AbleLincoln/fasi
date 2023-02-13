@@ -1491,6 +1491,10 @@ hr {
 .c-btn-secondary:hover span::after {
   opacity: 1;
 }
+.c-btn-transparent {
+  background: transparent;
+  border: 2px solid white;
+}
 
 .c-btn-group {
   display: flex;
