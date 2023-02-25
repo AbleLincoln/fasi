@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Display theme blocks from flexible content (acf)
  *
@@ -7,7 +8,8 @@
  * @since fasi 1.0
  */
 
-class ContentBlock {
+class ContentBlock
+{
 
     private static $theme_blocks_locations = array(
         'block_content'                 => 'page/content',
@@ -36,23 +38,29 @@ class ContentBlock {
         'block_accordion'               => 'page/block-accordion',
         'universal_block'               => 'page/universal-block',
         'pretty_window_block'           => 'page/pretty-window-block',
+        'block_publications'            => 'page/block-publications'
     );
 
-    private function __construct(){}
+    private function __construct()
+    {
+    }
 
-    public static function display_theme_blocks($field_name = 'page_blocks', $sec_param = null){
-        if($sec_param == null)
+    public static function display_theme_blocks($field_name = 'page_blocks', $sec_param = null)
+    {
+        if ($sec_param == null)
             $sec_param = get_the_ID();
-        while(have_rows($field_name, $sec_param)){ the_row();
+        while (have_rows($field_name, $sec_param)) {
+            the_row();
             $block_layout = get_row_layout();
 
-            if(isset(self::$theme_blocks_locations[$block_layout])){
+            if (isset(self::$theme_blocks_locations[$block_layout])) {
                 get_theme_part(self::$theme_blocks_locations[$block_layout]);
             }
         }
     }
 
-    public static function get_block_size_class(){
+    public static function get_block_size_class()
+    {
         $block_width     = get_sub_field('width') ? get_sub_field('width') : '8';
         $block_offset    = get_sub_field('offset') !== '' && get_sub_field('offset') !== false ? get_sub_field('offset') : '2';
         $block_width_sm     = get_sub_field('width_tablet') ? get_sub_field('width_tablet') : '12';
@@ -64,44 +72,46 @@ class ContentBlock {
         $block_size_classes[] = "col-md-" . $block_width_sm;
         $block_size_classes[] = "col-lg-" . $block_width;
 
-        if(!empty($block_offset_xs) || $block_offset_xs === '0') {
+        if (!empty($block_offset_xs) || $block_offset_xs === '0') {
             $block_size_classes[] = "offset-" . $block_offset_xs;
         }
 
-        if(!empty($block_offset_sm) || $block_offset_sm === '0') {
+        if (!empty($block_offset_sm) || $block_offset_sm === '0') {
             $block_size_classes[] = "offset-md-" . $block_offset_sm;
         }
 
-        if(!empty($block_offset) || $block_offset === '0') {
+        if (!empty($block_offset) || $block_offset === '0') {
             $block_size_classes[] = "offset-lg-" . $block_offset;
         }
 
         return implode(' ', $block_size_classes);
     }
 
-    public static function get_block_spacing_class(){
+    public static function get_block_spacing_class()
+    {
         $result = array();
-        if(get_sub_field('top_spacing')){
+        if (get_sub_field('top_spacing')) {
             $result[] = 'block-top-spacing';
         }
-        if(get_sub_field('bottom_spacing')){
+        if (get_sub_field('bottom_spacing')) {
             $result[] = 'block-bottom-spacing';
         }
 
-        if(get_sub_field('top_margin')){
+        if (get_sub_field('top_margin')) {
             $result[] = 'block-margin-top';
         }
-        if(get_sub_field('bottom_margin')){
+        if (get_sub_field('bottom_margin')) {
             $result[] = 'block-margin-bottom';
         }
 
         return implode(' ', $result);
     }
 
-    public static function the_block_title(){
+    public static function the_block_title()
+    {
         $block_title = get_sub_field('section_title');
-        if(!empty($block_title)):
-            ?><?php echo $block_title; ?><?php
-        endif;
-    }
-}
+        if (!empty($block_title)) :
+?><?php echo $block_title; ?><?php
+                                        endif;
+                                    }
+                                }
