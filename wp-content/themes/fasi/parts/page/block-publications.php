@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Block for Publications Sections
+ * Block for Publications Section
  * 
  * @package WordPress
  * @subpackage fasi
- * @since fasi 2.0
+ * @since fasi 1.0
  */
 ?>
 
