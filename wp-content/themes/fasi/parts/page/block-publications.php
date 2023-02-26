@@ -11,7 +11,7 @@
 $articles = get_sub_field('articles_2023')
 ?>
 
-<section class="block-accordion theme-light">
+<section class="block-accordion block-publications theme-light">
     <div class="container">
         <div class="row">
             <div class="block-accordion__content col-12">
@@ -34,12 +34,12 @@ $articles = get_sub_field('articles_2023')
                                         <em><?php echo $article['title'] ?></em>
                                     </a>
                                 </p>
-                                <p>
+                                <small>
                                     <?php echo $article['authors'] ?>
-                                </p>
-                                <p>
+                                </small>
+                                <small>
                                     <?php echo $article['citation'] ?>
-                                </p>
+                                </small>
                             </div>
                         <?php } ?>
                     </div>
