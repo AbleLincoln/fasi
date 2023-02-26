@@ -13,7 +13,6 @@ $articles = get_sub_field('articles_2023')
 ?>
 
 <section class="block-accordion block-publications theme-light">
-    <?php var_export($years) ?>
     <div class="container">
         <div class="row">
             <div class="block-accordion__content col-12">
