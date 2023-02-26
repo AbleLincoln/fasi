@@ -23,14 +23,14 @@ $articles = get_sub_field('articles_2023')
             <!-- fetch all metadata from pubmed -->
             <!-- sort into years -->
             <!-- make accordion for each year -->
-            <?php foreach ($years as $year) { ?>
-                <div class="block-accordion__accordion-container col-12">
-                    <div class="block-accordion__accordion">
+            <div class="block-accordion__accordion-container col-12">
+                <div class="block-accordion__accordion">
+                    <?php foreach ($years as $year) { ?>
                         <div class="block-accordion__accordion-item">
                             <div class="block-accordion__accordion-item-title">
                                 <button><?php echo $year ?></button>
                             </div>
-                            <?php foreach ($articles as $article) { ?>
+                            <?php foreach (get_sub_field('articles_' . $year) as $article) { ?>
                                 <div class="block-accordion__accordion-item-content">
                                     <p>
                                         <a href="<?php echo $article['link'] ?>">
@@ -47,9 +47,9 @@ $articles = get_sub_field('articles_2023')
                                 </div>
                             <?php } ?>
                         </div>
-                    </div>
+                    <?php } ?>
                 </div>
-            <?php } ?>
+            </div>
         </div>
     </div>
 </section>
