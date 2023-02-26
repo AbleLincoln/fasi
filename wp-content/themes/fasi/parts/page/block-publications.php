@@ -34,6 +34,12 @@ $articles = get_sub_field('articles_2023')
                                         <em><?php echo $article['title'] ?></em>
                                     </a>
                                 </p>
+                                <p>
+                                    <?php echo $article['authors'] ?>
+                                </p>
+                                <p>
+                                    <?php echo $article['citation'] ?>
+                                </p>
                             </div>
                         <?php } ?>
                     </div>
