@@ -8,18 +8,11 @@
  * @since fasi 2.0
  */
 
-$fields = get_fields();
-function filter_for_years($key)
-{
-    return strpos($key, 'articles') === 0;
-}
-
-$years = array_filter($fields, 'filter_for_years', ARRAY_FILTER_USE_KEY);
+$years = range(2023, 2017, -1);
 $articles = get_sub_field('articles_2023')
 ?>
 
 <section class="block-accordion block-publications theme-light">
-    <?php var_export($fields) ?>
     <?php var_export($years) ?>
     <div class="container">
         <div class="row">
@@ -35,7 +28,7 @@ $articles = get_sub_field('articles_2023')
                     <div class="block-accordion__accordion">
                         <div class="block-accordion__accordion-item">
                             <div class="block-accordion__accordion-item-title">
-                                <button>2023</button>
+                                <button><?php echo $year ?></button>
                             </div>
                             <?php foreach ($articles as $article) { ?>
                                 <div class="block-accordion__accordion-item-content">
