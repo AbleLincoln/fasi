@@ -29,7 +29,11 @@ $articles = get_sub_field('articles_2023')
                         </div>
                         <?php foreach ($articles as $article) { ?>
                             <div class="block-accordion__accordion-item-content">
-                                hello
+                                <p>
+                                    <a href="<?php echo $article['link'] ?>">
+                                        <em><?php echo $article['title'] ?></em>
+                                    </a>
+                                </p>
                             </div>
                         <?php } ?>
                     </div>
