@@ -5,10 +5,16 @@
  * 
  * @package WordPress
  * @subpackage fasi
- * @since fasi 1.0
+ * @since fasi 2.0
  */
 ?>
 
 <section>
-    <p>hello i am publications</p>
+    <div class="container block-accordion theme-light">
+        <div class="row">
+            <div class="block-accordion__content col-12">
+                <h2 class="h3">Publications</h2>
+            </div>
+        </div>
+    </div>
 </section>
