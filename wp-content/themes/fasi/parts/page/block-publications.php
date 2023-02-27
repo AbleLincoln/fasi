@@ -30,7 +30,7 @@ $years = get_sub_field('publications_accordion');
                             </div>
                             <div class="block-accordion__accordion-item-content">
                                 <?php foreach ($year['articles'] as $article) { ?>
-                                    <div class="block-publication__article">
+                                    <div class="block-publications__article">
                                         <p>
                                             <a href="<?php echo $article['link'] ?>">
                                                 <em><?php echo $article['title'] ?></em>
