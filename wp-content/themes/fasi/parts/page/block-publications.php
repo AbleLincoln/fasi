@@ -27,22 +27,24 @@ $years = get_sub_field('publications_accordion');
                             <div class="block-accordion__accordion-item-title">
                                 <button><?php echo $year['year_name'] ?></button>
                             </div>
-                            <?php foreach ($year['articles'] as $article) { ?>
-                                <div class="block-accordion__accordion-item-content">
-                                    <p>
-                                        <a href="<?php echo $article['link'] ?>">
-                                            <em><?php echo $article['title'] ?></em>
-                                        </a>
-                                    </p>
-                                    <small>
-                                        <?php echo $article['authors'] ?>
-                                    </small>
-                                    <br />
-                                    <small>
-                                        <?php echo $article['citation'] ?>
-                                    </small>
-                                </div>
-                            <?php } ?>
+                            <div class="block-accordion__accordion-item-content">
+                                <?php foreach ($year['articles'] as $article) { ?>
+                                    <div class="block-publication__article">
+                                        <p>
+                                            <a href="<?php echo $article['link'] ?>">
+                                                <em><?php echo $article['title'] ?></em>
+                                            </a>
+                                        </p>
+                                        <small>
+                                            <?php echo $article['authors'] ?>
+                                        </small>
+                                        <br />
+                                        <small>
+                                            <?php echo $article['citation'] ?>
+                                        </small>
+                                    </div>
+                                <?php } ?>
+                            </div>
                         </div>
                     <?php } ?>
                 </div>
