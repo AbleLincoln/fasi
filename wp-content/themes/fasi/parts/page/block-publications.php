@@ -8,12 +8,13 @@
  * @since fasi 2.0
  */
 
-// $years = range(2023, 2017, -1);
-// $articles = get_sub_field('articles_2023')
+$anchor_id = get_sub_field('anchor_id');
+$anchor = !empty($anchor_id) ? 'id="' . sanitize_title($anchor_id) . '" ' : '';
+
 $years = get_sub_field('publications_accordion');
 ?>
 
-<section class="block-accordion block-publications theme-light">
+<section <?php echo $anchor; ?> class="block-accordion block-publications theme-light">
     <div class="container">
         <div class="row">
             <div class="block-accordion__content col-12">
