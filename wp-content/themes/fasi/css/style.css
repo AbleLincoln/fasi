@@ -4652,7 +4652,10 @@ blockquote {
   margin-bottom: 20px;
 }
 
-.block-publications p {
+.block-publications__article {
+  margin: 1.5em 0;
+}
+.block-publications__article p {
   margin: 0;
 }
 
