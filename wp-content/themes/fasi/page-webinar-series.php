@@ -19,7 +19,7 @@ the_post();
     ?>
 
 
-    <section class="block-content block-bottom-spacing" style="background-color:#001030;">
+    <section class="block-content block-bottom-spacing" style="display: none;background-color:#001030;">
         <div class="container">
             <h4 style="color: #53d396; margin-top: 6rem; margin-bottom: 2rem;">Watch <span style="color: #ffffff;">Our Past Webinars</span></h4>
 
