@@ -20,11 +20,11 @@ the_post();
 
 
     <section class="block-content block-bottom-spacing" style="background-color:#001030;">
-        <h4 style="color: #53d396; margin-top: 6rem; margin-bottom: 2rem;">Watch <span style="color: #ffffff;">Our Past Webinars</span></h4>
-
         <div class="container">
+            <h4 style="color: #53d396; margin-top: 6rem; margin-bottom: 2rem;">Watch <span style="color: #ffffff;">Our Past Webinars</span></h4>
+
             <?php
-            $posts = get_posts(array("numberposts" => -1, "category" => 9));
+            $posts = get_posts(array("numberposts" => -1, "category" => 17)); // the 'webinar' cat
 
             foreach ($posts as $post) {
                 $id = $post->ID;
@@ -34,10 +34,7 @@ the_post();
             ?>
                 <div class="row">
                     <div class="col-12 col-md-12 col-lg-10 offset-lg-1">
-                        <?php echo $id;
-                        echo $video_iframe;
-                        echo $video_url; ?>
-                        <?php echo oembed_video_wrapper($video_iframe, $video_url, $thumbnail_url); ?>
+                        <?php echo $video_iframe; ?>
                     </div>
                 </div>
             <?php } ?>
