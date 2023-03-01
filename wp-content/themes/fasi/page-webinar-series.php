@@ -24,7 +24,7 @@ the_post();
 
         <div class="container">
             <?php
-            $posts = get_posts(array("category" => "video"));
+            $posts = get_posts(array("category" => 8));
 
             foreach ($posts as $post) {
                 $id = $post->ID;
