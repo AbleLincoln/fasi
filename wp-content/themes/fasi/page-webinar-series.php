@@ -34,7 +34,8 @@ the_post();
             ?>
                 <div class="row">
                     <div class="col-12 col-md-12 col-lg-10 offset-lg-1">
-                        <?php echo $video_iframe;
+                        <?php echo $id;
+                        echo $video_iframe;
                         echo $video_url; ?>
                         <?php echo oembed_video_wrapper($video_iframe, $video_url, $thumbnail_url); ?>
                     </div>
