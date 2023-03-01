@@ -27,12 +27,14 @@ the_post();
             $posts = get_posts(array("category" => "video"));
 
             foreach ($posts as $post) {
+                $id = $post->ID;
+                $video_iframe = get_field('video_thumbnail', $id);
+                $video_url = get_field('video_thumbnail', $id);
+                $thumbnail_url = get_the_post_thumbnail_url($post);
             ?>
                 <div class="row">
                     <div class="col-12 col-md-12 col-lg-10 offset-lg-1">
-                        <div style="padding:56.25% 0 0 0;position:relative;">
-                            <iframe src="https://player.vimeo.com/video/790953243?h=72eb8169de&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="January Webinar 2023.mp4" data-ready="true" frameborder="0"></iframe>
-                        </div>
+                        <?php echo oembed_video_wrapper($video_iframe, $video_url, $thumbnail_url); ?>
                     </div>
                 </div>
             <?php } ?>
