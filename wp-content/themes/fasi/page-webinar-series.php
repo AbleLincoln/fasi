@@ -12,11 +12,21 @@ get_header();
 the_post();
 ?>
 <main class="page-content">
-    hi here is my secret message
     <?php
     get_theme_part('page/hero');
     defaultContent();
     ContentBlock::display_theme_blocks();
-    ?></main>
+
+    get_posts(array("category" => "video"));
+
+    while (have_posts()) :
+        the_post();
+
+
+    ?>
+        the post
+    <?php endwhile; ?>
+
+</main>
 <?php
 get_footer();
