@@ -34,7 +34,9 @@ the_post();
                         $video_url = get_field('video_thumbnail', $id);
                         $thumbnail_url = get_the_post_thumbnail_url($post);
                     ?>
-                        <?php echo $video_iframe; ?>
+                        <div style="padding: 56.25% 0 0 0; position: relative;">
+                            <?php echo $video_iframe; ?>
+                        </div>
                     <?php } ?>
                 </div>
             </div>
