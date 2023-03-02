@@ -34,7 +34,7 @@ the_post();
                         $video_url = get_field('video_thumbnail', $id);
                         $thumbnail_url = get_the_post_thumbnail_url($post);
                     ?>
-                        <div style="padding: 56.25% 0 0 0; position: relative;">
+                        <div class="webinar-series__iframe-wrapper">
                             <?php echo $video_iframe; ?>
                         </div>
                     <?php } ?>
