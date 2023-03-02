@@ -5233,4 +5233,8 @@ blockquote {
   position: relative;
 }
 
+.webinar-series {
+  background-color: red;
+}
+
 /*# sourceMappingURL=style.css.map */
