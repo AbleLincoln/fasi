@@ -11,7 +11,7 @@
 get_header();
 the_post();
 ?>
-<main class="page-content">
+<main class="page-content webinar-series">
     <?php
     get_theme_part('page/hero');
     defaultContent();

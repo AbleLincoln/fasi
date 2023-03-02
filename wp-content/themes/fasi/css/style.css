@@ -5207,6 +5207,14 @@ blockquote {
   font-size: 12px;
 }
 
+.webinar-series iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Random custom stuff Andrew has added for one-off styles */
 .sponsor {
   max-width: 300px;
