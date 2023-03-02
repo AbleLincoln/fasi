@@ -19,7 +19,7 @@ the_post();
     ?>
 
 
-    <section class="block-content block-bottom-spacing" style="display: none;background-color:#001030;">
+    <section class="block-content block-bottom-spacing" style="background-color:#001030;">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-10 offset-lg-1">
