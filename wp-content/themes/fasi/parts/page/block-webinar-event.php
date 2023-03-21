@@ -44,10 +44,8 @@ $registration_link = get_sub_field('registration_link');
                     <span style="color: #ffffff; font-weight: 100;"><?php echo $event_title ?></span>
                 </p>
 
-                <p>
-                    <span style="color: #4673ff;"><small>Speaker</small></span> <br />
-                    <?php echo $speaker ?>
-                </p>
+                <span style="color: #4673ff;"><small>Speaker</small></span> <br />
+                <?php echo $speaker ?>
 
                 <p>
                     <?php echo do_shortcode('[button href="' . $registration_link . '" target="_blank"]Register[/button]') ?>
