@@ -31,14 +31,22 @@ $speaker = get_sub_field('speaker');
         <div class="row">
             <div class="<?php echo $block_size; ?>">
                 <h4 style="color: #53d396; margin-bottom: 2rem;"><?php echo $block_title ?></h4>
-                <span style="color: #4db7b1;"><small>Date</small></span>
-                <span style="color: #ffffff; font-weight: 100;"><?php echo $date ?></span>
 
-                <span style="color: #4db7b1;"><small>Title</small></span>
-                <span style="color: #ffffff; font-weight: 100;"><?php echo $event_title ?></span>
 
-                <span style="color: #4673ff;"><small>Speaker</small></span>
-                <span style="color: #ffffff; font-weight: 100;"><?php echo $speaker ?></span>
+                <p>
+                    <span style="color: #4db7b1;"><small>Date</small></span> <br />
+                    <span style="color: #ffffff; font-weight: 100;"><?php echo $date ?></span>
+                </p>
+
+                <p>
+                    <span style="color: #4db7b1;"><small>Title</small></span> <br />
+                    <span style="color: #ffffff; font-weight: 100;"><?php echo $event_title ?></span>
+                </p>
+
+                <p>
+                    <span style="color: #4673ff;"><small>Speaker</small></span> <br />
+                    <span style="color: #ffffff; font-weight: 100;"><?php echo $speaker ?></span>
+                </p>
             </div>
         </div>
     </div>
