@@ -25,6 +25,7 @@ $block_title = get_sub_field('block_title');
 $date = get_sub_field('date');
 $event_title = get_sub_field('event_title');
 $speaker = get_sub_field('speaker');
+$registration_link = get_sub_field('registration_link');
 
 ?><section class="<?php echo $main_block_class; ?>" style="<?php echo $attr_style; ?>">
     <div class="container">
@@ -49,7 +50,7 @@ $speaker = get_sub_field('speaker');
                 </p>
 
                 <p>
-                    <?php echo do_shortcode('[button href="https://us06web.zoom.us/webinar/register/WN_8kAk6u8wS_WqY4xlGZSbkQ" target="_blank"]Register[/button]') ?>
+                    <?php echo do_shortcode('[button href="' . $registration_link . '" target="_blank"]Register[/button]') ?>
                 </p>
             </div>
         </div>
