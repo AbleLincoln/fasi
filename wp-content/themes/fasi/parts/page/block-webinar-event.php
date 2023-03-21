@@ -27,7 +27,7 @@ $event_title = get_sub_field('event_title');
 $speaker = get_sub_field('speaker');
 $registration_link = get_sub_field('registration_link');
 
-?><section class="<?php echo $main_block_class; ?>" style="<?php echo $attr_style; ?>">
+?><section class="<?php echo $main_block_class; ?> block-webinar-event" style="<?php echo $attr_style; ?>">
     <div class="container">
         <div class="row">
             <div class="<?php echo $block_size; ?>">

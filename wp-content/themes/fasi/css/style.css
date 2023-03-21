@@ -4659,6 +4659,10 @@ blockquote {
   margin: 0;
 }
 
+.block-webinar-event p {
+  color: white;
+}
+
 .hero-staff {
   background: #3C67FF;
   background: linear-gradient(68deg, #3C67FF -80%, #001733 45%, #001733 100%);
