@@ -47,6 +47,10 @@ $speaker = get_sub_field('speaker');
                     <span style="color: #4673ff;"><small>Speaker</small></span> <br />
                     <span style="color: #ffffff; font-weight: 100;"><?php echo $speaker ?></span>
                 </p>
+
+                <p>
+                    <?php echo do_shortcode('[button href="https://us06web.zoom.us/webinar/register/WN_8kAk6u8wS_WqY4xlGZSbkQ" target="_blank"]Register[/button]') ?>
+                </p>
             </div>
         </div>
     </div>
