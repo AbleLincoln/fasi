@@ -31,7 +31,7 @@ $registration_link = get_sub_field('registration_link');
     <div class="container">
         <div class="row">
             <div class="<?php echo $block_size; ?>">
-                <h4 style="color: #53d396; margin-bottom: 2rem;"><?php echo $block_title ?></h4>
+                <h4><?php echo $block_title ?></h4>
 
 
                 <p>

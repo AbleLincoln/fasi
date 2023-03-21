@@ -4659,6 +4659,10 @@ blockquote {
   margin: 0;
 }
 
+.block-webinar-event h4 {
+  color: #53d396;
+  margin-bottom: 2rem;
+}
 .block-webinar-event p {
   color: white;
 }
