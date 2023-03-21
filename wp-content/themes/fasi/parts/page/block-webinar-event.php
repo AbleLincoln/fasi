@@ -21,11 +21,24 @@ if (!empty($bg_color)) {
     $attr_style .= 'background-color:' . $bg_color . ';';
 }
 
+$block_title = get_sub_field('block_title');
+$date = get_sub_field('date');
+$event_title = get_sub_field('event_title');
+$speaker = get_sub_field('speaker');
+
 ?><section class="<?php echo $main_block_class; ?>" style="<?php echo $attr_style; ?>">
     <div class="container">
         <div class="row">
             <div class="<?php echo $block_size; ?>">
-                content goes here
+                <h4 style="color: #53d396; margin-bottom: 2rem;"><?php echo $block_title ?></h4>
+                <span style="color: #4db7b1;"><small>Date</small></span>
+                <span style="color: #ffffff; font-weight: 100;"><?php echo $date ?></span>
+
+                <span style="color: #4db7b1;"><small>Title</small></span>
+                <span style="color: #ffffff; font-weight: 100;"><?php echo $event_title ?></span>
+
+                <span style="color: #4673ff;"><small>Speaker</small></span>
+                <span style="color: #ffffff; font-weight: 100;"><?php echo $speaker ?></span>
             </div>
         </div>
     </div>
