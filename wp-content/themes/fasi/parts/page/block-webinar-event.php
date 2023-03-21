@@ -46,7 +46,7 @@ $registration_link = get_sub_field('registration_link');
 
                 <p>
                     <span style="color: #4673ff;"><small>Speaker</small></span> <br />
-                    <span style="color: #ffffff; font-weight: 100;"><?php echo $speaker ?></span>
+                    <?php echo $speaker ?>
                 </p>
 
                 <p>
