@@ -38,7 +38,8 @@ class ContentBlock
         'block_accordion'               => 'page/block-accordion',
         'universal_block'               => 'page/universal-block',
         'pretty_window_block'           => 'page/pretty-window-block',
-        'block_publications'            => 'page/block-publications'
+        'block_publications'            => 'page/block-publications',
+        'block_webinar_event'            => 'page/block-webinar-event'
     );
 
     private function __construct()
@@ -112,6 +113,6 @@ class ContentBlock
         $block_title = get_sub_field('section_title');
         if (!empty($block_title)) :
 ?><?php echo $block_title; ?><?php
-                                        endif;
-                                    }
-                                }
+                            endif;
+                        }
+                    }
