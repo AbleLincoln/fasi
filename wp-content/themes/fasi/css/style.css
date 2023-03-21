@@ -4665,6 +4665,7 @@ blockquote {
 }
 .block-webinar-event p {
   color: white;
+  font-weight: 100;
 }
 
 .hero-staff {
