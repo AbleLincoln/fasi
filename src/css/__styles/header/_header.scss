@@ -1,262 +1,274 @@
 /* Main Header */
 .main-header {
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    transition: background-color 300ms ease;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background-color 300ms ease;
 
-    &.scrolled {
-        background-color: $blue-dark;
+  &.scrolled {
+    background-color: $blue-dark;
+  }
+
+  &__left {
+    order: 1;
+  }
+
+  &__logo {
+    max-width: rem(215);
+
+    @include md() {
+      max-width: 100%;
     }
-    
-    &__left {
-        order: 1;
+
+    svg {
+      height: rem(34);
+      width: auto;
+
+      @include md() {
+        height: rem(23);
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: rem(30) 0;
+    width: 100%;
+
+    @include md() {
+      padding: rem(15) 0;
     }
 
-    &__logo {
-        max-width: rem(215);
+    .row {
+      display: flex;
+      align-items: center;
+    }
+  }
 
-        @include md() {
-            max-width: 100%;
+  &__nav {
+    order: 2;
+    display: flex;
+    justify-content: flex-start;
+
+    @include md() {
+      order: 3;
+      justify-content: center;
+    }
+
+    a {
+      font-size: rem(14);
+      line-height: rem(18);
+      font-weight: 500;
+      width: 100%;
+      text-decoration: none;
+    }
+
+    .highlight-text {
+      padding: 0;
+    }
+
+    > ul {
+      // top level nav
+      display: flex;
+      padding-left: 100px;
+
+      @include md() {
+        display: none;
+        flex-flow: column;
+        padding-left: 0;
+        position: fixed;
+        top: 40px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+        padding-top: 40px;
+      }
+
+      li {
+        // all level nav items
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &:hover {
+          > a {
+            color: $nav-hover-color;
+          }
+
+          > ul {
+            display: block;
+          }
         }
+      }
 
-        svg {
-            height: rem(34);
-            width: auto;
+      > li {
+        // top level nav items
+        display: flex;
+
+        &:hover {
+          > a {
+            color: $nav-hover-color;
+            background-color: $blue;
 
             @include md() {
-                height: rem(23);
+              background-color: transparent;
             }
-        }
-    }
-
-    &__wrapper {
-        padding: rem(30) 0;
-        width: 100%;
-
-        @include md() {
-            padding: rem(15) 0;
+          }
         }
 
-        .row {
-            display: flex;
-            align-items: center;
-        }
-    }
-    
-    &__nav {
-        order: 2;
-        display: flex;
-        justify-content: flex-start;
-
-        @include md() {
-            order: 3;
-            justify-content: center;
+        &:last-child {
+          margin-right: 0;
         }
 
         a {
-            font-size: rem( 14 );
-            line-height: rem( 18 );
-            font-weight: 500;
+          color: $subnav-color;
+          width: 100%;
+        }
+
+        > a {
+          // top level nav links
+          color: $nav-color;
+          font-family: $font-secondary;
+          font-weight: 500;
+          letter-spacing: rem(0.4);
+          padding: rem(10) rem(24);
+          text-transform: uppercase;
+        }
+
+        button {
+          appearance: none;
+          display: none;
+          text-indent: -9999px;
+
+          @include md() {
+            display: block;
+          }
+
+          &.open {
+            + ul {
+              display: block;
+            }
+          }
+        }
+
+        ul {
+          // all sublevel nav
+          display: none;
+
+          width: rem(220);
+          position: absolute;
+          top: rem(-2);
+          left: 100%;
+          padding-top: 10px;
+
+          @include md() {
+            position: relative;
+            top: auto;
+            left: auto;
+            padding-top: 0;
+            padding-left: 20px;
+            width: auto;
+          }
+
+          li {
+            // all sublevel nav items
             width: 100%;
-            text-decoration: none;
-        }
-
-        .highlight-text {
-            padding: 0;
-        }
-
-        > ul { // top level nav
-            display: flex;
-            padding-left: 100px;
+            background-color: $blue;
 
             @include md() {
-                display: none;
-                flex-flow: column;
-                padding-left: 0;
-                position: fixed;
-                top: 100px;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                overflow: auto;
-                padding-top: 40px;
+              background-color: transparent;
             }
 
-            li { // all level nav items
-                display: flex;
-                flex-direction: column;
-                position: relative;
+            &:hover {
+              background-color: $white;
 
-                &:hover {
-                    > a {
-                        color: $nav-hover-color;
-                    }
-
-                    > ul {
-                        display: block;
-                    }
-                }
+              a {
+                color: $blue !important;
+              }
             }
 
-            > li { // top level nav items
-                display: flex;
-
-                &:hover {
-                    > a {
-                        color: $nav-hover-color;
-                        background-color: $blue;
-
-                        @include md() {
-                            background-color: transparent;
-                        }
-                    }
-                }
-
-                &:last-child {
-                    margin-right: 0;
-                }
-
-                a {
-                    color: $subnav-color;
-                    width: 100%;
-                }
-
-                > a { // top level nav links
-                    color: $nav-color;
-                    font-family: $font-secondary;
-                    font-weight: 500;
-                    letter-spacing: rem(.4);
-                    padding: rem( 10 ) rem(24);
-                    text-transform: uppercase;
-                }
-
-                button {
-                    appearance: none;
-                    display: none;
-                    text-indent: -9999px;
-
-                    @include md() {
-                        display: block;
-                    }
-
-                    &.open {
-                        + ul {
-                            display: block;
-                        }
-                    }
-                }
-
-                ul { // all sublevel nav
-                    display: none;
-
-                    width: rem(220);
-                    position: absolute;
-                    top: rem(-2);
-                    left: 100%;
-                    padding-top: 10px;
-
-                    @include md() {
-                        position: relative;
-                        top: auto;
-                        left: auto;
-                        padding-top: 0;
-                        padding-left: 20px;
-                        width: auto;
-                    }
-
-                    li { // all sublevel nav items
-                        width: 100%;
-                        background-color: $blue;
-
-                        @include md() {
-                            background-color: transparent;
-                        }
-
-                        &:hover {
-                            background-color: $white;
-                            
-                            a {
-                                color: $blue !important;
-                            }
-                        }
-
-                        a { // all sublevel nav links
-                            padding: rem(10) rem(24) rem(10);
-                        }
-                    }
-                }
-
-                > ul { // second level navs
-                    top: 100%;
-                    left: 0;
-
-                    @include md() {
-                        top: auto;
-                        left: auto;
-                    }
-                }
+            a {
+              // all sublevel nav links
+              padding: rem(10) rem(24) rem(10);
             }
+          }
         }
+
+        > ul {
+          // second level navs
+          top: 100%;
+          left: 0;
+
+          @include md() {
+            top: auto;
+            left: auto;
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    text-align: right;
+    order: 3;
+
+    @include md() {
+      display: static;
+      align-items: left;
+      order: 2;
     }
 
-    &__right {
-        text-align: right;
-        order: 3;
-
-        @include md() {
-            display: static;
-            align-items: left;
-            order: 2;
-        }
-
-        .c-btn + .c-btn {
-            margin-left: rem(11.5);
-        }
+    .c-btn + .c-btn {
+      margin-left: rem(11.5);
     }
+  }
 
-    &:hover {
-        .main-header {
-            &__nav {
-                > ul { // top level nav
-                    li { // all level nav items
-                        &:hover {
-                            > a {
-                                color: $nav-light-hover-color;
-                            }
-                        }
-                    }
+  &:hover {
+    .main-header {
+      &__nav {
+        > ul {
+          // top level nav
+          li {
+            // all level nav items
+            &:hover {
+              > a {
+                color: $nav-light-hover-color;
+              }
+            }
+          }
 
-                    > li { // top level nav items
-                        &:hover {
-                            > a {
-                                color: $nav-light-hover-color;
-                            }
-                        }
-
-                        a {
-                            color: $subnav-light-color;
-                        }
-
-                        > a { // top level nav links
-                            color: $nav-light-color;
-                        }
-                    }
-                }
+          > li {
+            // top level nav items
+            &:hover {
+              > a {
+                color: $nav-light-hover-color;
+              }
             }
 
-            &__logo {
-                &.logo-dark {
-                    display: flex;
-                }
-
-                &.logo-light {
-                    display: none;
-                }
+            a {
+              color: $subnav-light-color;
             }
+
+            > a {
+              // top level nav links
+              color: $nav-light-color;
+            }
+          }
         }
+      }
+
+      &__logo {
+        &.logo-dark {
+          display: flex;
+        }
+
+        &.logo-light {
+          display: none;
+        }
+      }
     }
+  }
 }

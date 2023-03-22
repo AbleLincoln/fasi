@@ -748,7 +748,7 @@ body.overlayed:before {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.95);
   z-index: 9;
   content: "";
   display: block;
@@ -2291,7 +2291,7 @@ blockquote {
     flex-flow: column;
     padding-left: 0;
     position: fixed;
-    top: 100px;
+    top: 40px;
     right: 0;
     bottom: 0;
     left: 0;
