@@ -4667,6 +4667,10 @@ blockquote {
   color: white;
   font-weight: 100;
 }
+.block-webinar-event .speaker-title {
+  display: inline-block;
+  margin: 5px 0;
+}
 
 .hero-staff {
   background: #3C67FF;
